@@ -1,12 +1,41 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Downloads\\MVC_HRM\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2899FD8-321A-46EA-883E-1B66C3BA7E92}|HRManager\\HRManager.csproj|c:\\users\\administrator\\downloads\\mvc_hrm\\hrmanager\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{C2899FD8-321A-46EA-883E-1B66C3BA7E92}|HRManager\\HRManager.csproj|solutionrelative:hrmanager\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Downloads\\MVC_HRM\\HRManager\\Web.config",
+              "RelativeDocumentMoniker": "HRManager\\Web.config",
+              "ToolTip": "C:\\Users\\Administrator\\Downloads\\MVC_HRM\\HRManager\\Web.config",
+              "RelativeToolTip": "HRManager\\Web.config",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEMAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-10T14:05:47.877Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
