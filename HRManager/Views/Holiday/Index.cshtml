@@ -1,0 +1,78 @@
+﻿@model IEnumerable<HRManager.tblHoliday>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>@Resources.Content.Holidays</h3>
+        </div>
+
+        <div class="title_right">
+            @if (HRManager.Common.setRole.Role_HRCategory_update)
+            {
+                <a href="@Url.Action("Create", "Holiday")" class="btn btn-primary btn-xs" style="float:right">@Resources.Content.Add</a>
+            }
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-box table-responsive">
+                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>@Resources.Content.HolidayName VN</th>
+                                            <th>@Resources.Content.HolidayName EN</th>
+                                            <th>@Resources.Content.FromDate</th>
+                                            <th>@Resources.Content.ToDate</th>
+                                            <th>@Resources.Content.Active</th>
+                                            <th>#</th>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@Html.DisplayFor(modelItem => item.NameHolidayVN)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.NameHolidayEN)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.fromDateHoliday)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.toDateHoliday)</td>
+                                                <td>
+                                                    @if (item.isActive == true)
+                                                    {
+                                                        <span>@Resources.Content.Active</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span>@Resources.Content.InActive</span>
+
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("Details", "Holiday", new { id = @item.ID })" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

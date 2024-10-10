@@ -1,0 +1,65 @@
+﻿@model HRManager.tblWorkingShift
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Create", "WorkingShift", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.WorkingShift</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <label>@Resources.Content.WorkingShiftName VN </label>
+                            <input type="text" id="WorkingShiftVN" required class="form-control" placeholder="@Resources.Content.WorkingShiftName VN" name="WorkingShiftVN">
+                        </div>
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <label>@Resources.Content.WorkingShiftName EN </label>
+                            <input type="text" id="WorkingShiftEN" required class="form-control" placeholder="@Resources.Content.WorkingShiftName EN" name="WorkingShiftEN">
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.HourStart AM </label>
+                            <input type="text" id="fromTimeAM" required name="fromTimeAM" class="form-control" placeholder="@Resources.Content.HourStart" />
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.HourEnd AM</label>
+                            <input type="text" id="toTimeAM" required class="form-control" onchange="validateAndCalculate()" placeholder="@Resources.Content.HourEnd" name="ToTimeAM">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.HourStart PM </label>
+                            <input type="text" id="fromTimePM" name="fromTimePM" class="form-control" placeholder="@Resources.Content.HourStart" />
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.HourEnd PM</label>
+                            <input type="text" id="toTimePM" required class="form-control" onchange="validateAndCalculate()" placeholder="@Resources.Content.HourEnd" name="toTimePM">
+                        </div>
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <label>@Resources.Content.Note </label>
+                            <input type="text" id="Note" required class="form-control" placeholder="@Resources.Content.Note" name="Note">
+                        </div>
+
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+

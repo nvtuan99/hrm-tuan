@@ -1,0 +1,170 @@
+﻿
+<ul class="sidebar-nav" id="sidebar-nav">
+
+    @if (HRManager.Common.setRole.Role_homePage_view)
+    {
+        <li class="nav-item">
+            <a class="nav-link " href="index.html">
+                <i class="bi bi-grid"></i>
+                <span>
+                    @Resources.Content.HomePage
+                </span>
+            </a>
+        </li>
+    }
+    @if (HRManager.Common.setRole.Role_HR_view)
+    {
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#Reward-nav" data-bs-toggle="collapse" href="#">
+                <i class="bx bxs-user-account"></i><span>@Resources.Content.Employee </span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="Reward-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/Reward/Index">@Resources.Content.Employee</a>
+                </li>
+                <li>
+                    <a href="/Reward/Index">@Resources.Content.Reward</a>
+                </li>
+                <li>
+                    <a href="/Discipline/Index">@Resources.Content.Discipline</a>
+                </li>
+                <li>
+                    <a href="/Leave/Index">@Resources.Content.OnLeave</a>
+                </li>
+                <li>
+                    <a href="/Overtime/Index">@Resources.Content.Overtime</a>
+                </li>
+                <li>
+                    <a href="/AnnualLeave/Index">@Resources.Content.AnnualLeave</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#Timekeeping-nav" data-bs-toggle="collapse" href="#">
+                <i class="bx bxs-calendar-check"></i><span>@Resources.Content.Timekeeping </span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="Timekeeping-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/Timesheets/Index">@Resources.Content.Timesheets</a>
+                </li>
+                <li>
+                    <a href="/HistoryTimekeeping/Index">@Resources.Content.TimekeepingHistory</a>
+                </li>
+                <li>
+                    <a href="/EmployeeCard/Index">@Resources.Content.RegisCard</a>
+                </li>
+                <li>
+                    <a href="/ShiftArrange/Index">@Resources.Content.ShiftArrange</a>
+                </li>
+            </ul>
+        </li>
+    }
+
+
+    @if (HRManager.Common.setRole.Role_Salary_view)
+    {
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#Salary-nav" data-bs-toggle="collapse" href="#">
+                <i class="bx bx-money"></i><span>@Resources.Content.Salary </span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="Salary-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/SalarySheet/Index">@Resources.Content.SalarySheet</a>
+                </li>
+                <li>
+                    <a href="/Allowance/Index">@Resources.Content.Salary & @Resources.Content.Allowance</a>
+                </li>
+            </ul>
+        </li>
+    }
+    @if (HRManager.Common.setRole.Role_Contract_view)
+    {
+        <li class="nav-item">
+            <a class="nav-link " href="/Contract/Index">
+                <i class="bx bxs-file-blank"></i>
+                <span>
+                    @Resources.Content.Contract
+                </span>
+            </a>
+        </li>
+    }
+    @if (HRManager.Common.setRole.Role_HRCategory_view)
+    {
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#Category-nav" data-bs-toggle="collapse" href="#">
+                <i class="bx bxs-fridge"></i><span>@Resources.Content.Category </span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="Category-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/Company/Index">@Resources.Content.Company</a>
+                </li>
+                <li>
+                    <a href="/Department/Index">@Resources.Content.Department</a>
+                </li>
+                <li>
+                    <a href="/Position/Index">@Resources.Content.Position</a>
+                </li>
+                <li>
+                    <a href="/Degree/Index">@Resources.Content.Degree</a>
+                </li>
+                <li>
+                    <a href="/Nationality/Index">@Resources.Content.Nationality</a>
+                </li>
+                <li>
+                    <a href="/Nation/Index">@Resources.Content.Nation</a>
+                </li>
+
+                <li>
+                    <a href="/Holiday/Index">@Resources.Content.Holidays</a>
+                </li>
+
+                <li>
+                    <a href="/TimekeepingMachine/Index">@Resources.Content.TimekeepingMachine</a>
+                </li>
+                <li>
+                    <a href="/WorkingShift/Index">@Resources.Content.WorkingShift</a>
+                </li>
+            </ul>
+        </li>
+    }
+    @if (HRManager.Common.setRole.Role_ContractCategory_view)
+    {
+        <li class="nav-item">
+            <a class="nav-link " href="/Contract/Index">
+                <i class="bx bxs-file"></i>
+                <span>
+                    @Resources.Content.CategoryContract
+                </span>
+            </a>
+        </li>
+    }
+    @if (HRManager.Common.setRole.Role_SalaryCategory_view)
+    {
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#CategorySalary-nav" data-bs-toggle="collapse" href="#">
+                <i class="bx bxs-factory"></i><span> @Resources.Content.CategorySalary </span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="CategorySalary-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li><a href="/AllowanceCategory/Index">@Resources.Content.Allowance</a>
+                <li><a href="/SalaryFormular/Index">@Resources.Content.SalaryFormular</a>
+
+            </ul>
+        </li>
+
+    }
+
+    @if (HRManager.Common.setRole.Role_System_view)
+    {
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#System-nav" data-bs-toggle="collapse" href="#">
+                <i class="bx bxs-cog"></i><span> @Resources.Content.System </span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="System-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+
+                <li><a href="/SysLog/Index">@Resources.Content.SystemLog</a>
+                <li><a href="/User/Index">@Resources.Content.UserAccount</a>
+            </ul>
+        </li>
+    }
+</ul>

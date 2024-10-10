@@ -1,0 +1,301 @@
+﻿@using System.Web.Mvc.Html
+@using System.Web.Mvc
+@model HRManager.tblEmployee
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Create", "Employee", FormMethod.Post, new { onsubmit = "return validateForm()" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.Add @Resources.Content.Employee</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">@Resources.Content.EmployeeInformation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="work-tab" data-toggle="tab" href="#work" role="tab" aria-controls="work" aria-selected="false">@Resources.Content.InformationWork</a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="x_panel">
+                                <div class="x_content">
+                                    <br />
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <div class="col-md-2 col-sm-2  form-group has-feedback">
+                                            <img class="form-control" id="output" src="~/Uploads/Images/person1.png" style="width:120px;height:100px" onchange="" />
+                                            <input class="form-control" name="photo" accept="image/*" type="file" id="upload" style="margin-top: 20px; width: 90%; font-size: 8px; border: none;">
+
+                                        </div>
+                                        <div class="col-md-10 col-sm-10  form-group has-feedback">
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.EmployeeCode</label>
+                                                <input type="text" required class="form-control" placeholder="@Resources.Content.EmployeeCode" name="EmployeeCode" id="EmployeeCode">
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.FirstName</label>
+                                                <input type="text" required class="form-control" placeholder="@Resources.Content.FirstName" name="FirstName" id="FirstName">
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.FullName</label>
+                                                <input type="text" required class="form-control" placeholder="@Resources.Content.FullName" name="FullName" id="FullName">
+                                            </div>
+
+                                            <div class="col-md-12 col-sm-12"><br /> </div>
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.OtherName</label>
+                                                <input type="text" required class="form-control" placeholder="@Resources.Content.OtherName" name="CommonName" id="CommonName">
+                                            </div>
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.Gender</label>
+                                                <select class="form-control" name="Gender" required>
+                                                    <option selected value="2">Choose</option>
+                                                    <option value="1">@Resources.Content.Male</option>
+                                                    <option value="0">@Resources.Content.Female</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.MarialStatus</label>
+                                                @Html.DropDownList("MaritalID", new SelectList(ViewBag.ABC, "Value", "Text")
+                                                       , new { @class = "form-control" ,required = "required" })
+                                                @*@Html.DropDownListFor(model => model.MaritalID, ViewBag.MaritalStatus as SelectList, "Chọn", new { @class = "form-control search-select", id = "MaritalID" })*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                        <label>@Resources.Content.Birthday</label>
+                                        <input type="text" id="Birthday" name="Birthday" class="form-control" />
+                                        @*@Html.TextBoxFor(model => model.Birthday, "{0:yyyy/MM/dd}", new { @class = "form-control", type = "text", id = "Birthday", required = "required" })*@
+                                    </div>
+
+                                    <div class="col-md-8 col-sm-8  form-group has-feedback">
+                                        <label>@Resources.Content.PlaceOfBirth</label>
+                                        <input type="text" required value="" class="form-control" placeholder="Nơi Sinh" name="PlaceOfBirth" id="PlaceOfBirth">
+                                    </div>
+
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <label>@Resources.Content.Address</label>
+                                        <input type="text" required value="" class="form-control" placeholder="Địa chỉ" name="Address" id="Address">
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <label>@Resources.Content.AddressTmp</label>
+                                        <input type="text" required value="" class="form-control" placeholder="Tạm trú" name="AddressTmp" id="AddressTmp">
+                                    </div>
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Phone</label>
+                                        <input type="text" required id="Phone" value="" class="form-control" placeholder="Điện thoại" name="Phone">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>Email</label>
+                                        <input type="text" id="Email" value="" class="form-control" placeholder="Email" name="Email">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.DateStartWord</label>
+                                        <input type="text" required id="DateStartWord" value="" class="form-control" placeholder="@Resources.Content.DateStartWord" name="DateStartWord">
+
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Nationality</label>
+                                        @Html.DropDownListFor(model => model.NationalityID, ViewBag.Nationality as SelectList, "Quốc tịch", new { @class = "form-control search-select", id = "Nationality", required = "required" })
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Nation</label>
+                                        @Html.DropDownListFor(model => model.NationID, ViewBag.Nation as SelectList, "Dân tộc", new { @class = "form-control search-select", id = "NationID", required = "required" })
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Religion</label>
+                                        @Html.DropDownListFor(model => model.ReligionID, ViewBag.Religion as SelectList, "Tôn giáo", new { @class = "form-control search-select", id = "ReligionID", required = "required" })
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Degree</label>
+                                        @Html.DropDownListFor(model => model.DegreeID, ViewBag.Degree as SelectList, "Học vấn", new { @class = "form-control search-select", id = "DegreeID", required = "required" })
+                                    </div>
+
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.ForeignLanguage</label>
+                                        
+                                        <div style="display: flex; flex-wrap: wrap;">
+                                            @foreach (var names in ViewBag.ForeignLanguage)
+                                            {
+                                                <div class="checkbox flat" style="flex-basis: 20%; flex-shrink: 0;">
+                                                    <label>
+                                                        <input style="width:20px" type="checkbox" id="ForeignsID" name="ForeignsID" class="form-control" value="@names.Value" />
+                                                        <span>@names.Text</span>
+                                                    </label>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <input class="form-control" style="width:18px;" type="checkbox" id="Authority" name="Authority">
+                                        <span>@Resources.Content.PersonalAuthorization</span>
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.CCCD</label>
+                                        <input type="text" required value="" class="form-control" placeholder="Số CCCD" name="CCCD" id="CCCD ">
+                                    </div>
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Date</label>
+                                        <input type="text" id="DateCCCD" name="DateCCCD" class="form-control" />
+                                    </div>
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.IssuedBy</label>
+                                        <input required type="text" value="" class="form-control" placeholder="Nơi cấp" name="IssuedBy" id="IssuedBy">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback" style="visibility: hidden">
+                                        <label>ID</label>
+                                        <input type="text" name="IDEmp" id="IDEmp" value="" readonly="readonly" class="form-control" placeholder="Default Input">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Health</label>
+                                        <input type="text" value="" class="form-control" placeholder="Sức khỏe" name="Health" id="Health">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Height</label>
+                                        <input type="text" value="" class="form-control" placeholder="Chiều cao" name="Height" id="Height">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Weight</label>
+                                        <input type="text" value="" class="form-control" placeholder="Cân nặng" name="Weight" id="Weight">
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <label>@Resources.Content.Note</label>
+                                        <input type="text" name="Note" id="Note" value="" class="form-control" placeholder="Ghi chú">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="work" role="tabpanel" aria-labelledby="work-tab">
+                            <div class="x_panel">
+                                <div class="x_content">
+                                    <br />
+                                    <div style="margin-bottom:5px">@Resources.Content.Company</div>
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback border" style="padding:10px">
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Company</label>
+                                            @Html.DropDownListFor(model => model.CompanyID, ViewBag.CompanyInfor as SelectList, "Công ty", new { @class = "form-control search-select", id = "CompanyID", name = "CompanyID", required = "required" })
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Department</label>
+                                            @Html.DropDownListFor(model => model.DepartmentID, ViewBag.Department as SelectList, "Phòng ban", new { @class = "form-control search-select", id = "DeparmentID", name = "DeparmentID", required = "required" })
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Position</label>
+                                            @Html.DropDownListFor(model => model.PositionID, ViewBag.Position as SelectList, "Chức vụ", new { @class = "form-control search-select", id = "PositionID", name = "PositionID", required = "required" })
+                                        </div>
+                                    </div>
+
+                                    <div style="margin-bottom:5px">@Resources.Content.SocialInsurance</div>
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback border" style="padding:10px">
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.No</label>
+                                            <input type="text" value="" class="form-control" placeholder="Số sổ BHXH" name="NoBHXH" id="NoBHXH">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Date</label>
+                                            <input type="text" id="DateBHXH" name="DateBHXH" class="form-control" />
+                                        </div>
+
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.IssuedBy</label>
+                                            <input type="text" value="" class="form-control" placeholder="Nơi cấp BHXH" name="IssueByBHXH" id="IssueByBHXH">
+                                        </div>
+                                    </div>
+
+
+                                    <div style="margin-bottom:5px">@Resources.Content.HealthInsurance</div>
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback border" style="padding:10px">
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.No</label>
+                                            <input type="text" value="" class="form-control" placeholder="Số sổ BHYT" name="NoBHYT" id="NoBHYT">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.FromDate</label>
+                                            <input type="text" id="fromDateBHYT" name="fromDateBHYT" class="form-control" />
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.ToDate</label>
+                                            <input type="text" id="toDateBHYT" name="toDateBHYT" class="form-control" />
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Province</label>
+                                            <input type="text" value="" class="form-control" placeholder="Tỉnh thành BHYT" name="ProvinceBHYT" id="ProvinceBHYT">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Hopital</label>
+                                            <input type="text" value="" class="form-control" placeholder="Bệnh viện" name="HopitalBHYT" id="HopitalBHYT">
+                                        </div>
+                                    </div>
+
+
+                                    <div style="margin-bottom:5px">@Resources.Content.MonthlyPayments</div>
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback border" style="padding:10px">
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <input class="form-control" style="width:18px;" type="checkbox" id="BHXH" name="BHXH">                                            <span>@Resources.Content.SocialInsurance</span>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <input class="form-control" style="width:18px;" type="checkbox" id="BHYT" name="BHYT">
+                                            <span>@Resources.Content.HealthInsurance</span>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <input class="form-control" style="width:18px;" type="checkbox" id="BHTN" name="BHTN">       
+                                            <span>@Resources.Content.UnemploymentInsurance</span>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <input class="form-control" style="width:18px;" type="checkbox" id="UnionDues" name="UnionDues">       
+                                            <span>@Resources.Content.UnionDues</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                        <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

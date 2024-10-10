@@ -1,0 +1,93 @@
+﻿@model IEnumerable<HRManager.Models.ViewModel>
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Details", "Discipline", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.Discipline</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-md-6 col-sm-6">
+                                <label>@Resources.Content.DisciplineNo<span class="required">*</span></label>
+                                <input type="text" id="NoDiscipline" name="NoDiscipline" value="@item.discipline.NoDiscipline" class="form-control" placeholder="No Reward">
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <label>@Resources.Content.DisciplineType </label>
+                                @Html.DropDownListFor(model => item.discipline.TypeDiscipline, (IEnumerable<SelectListItem>)ViewBag.DisciplineType, "Loại kỉ luật", new { @class = "form-control search-select", @id = "TypeDiscipline", @name = "TypeDiscipline" })
+                            </div>
+
+                            <div class="col-md-12 col-sm-12" style="margin-top:15px;">
+                                <label>@Resources.Content.Reason <span class="required">*</span></label>
+                                <input type="text" id="Reason" name="Reason" value="@item.discipline.Reason" class="form-control" placeholder="Lý do">
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.EmployeeCode <span class="required">*</span></label>
+                                @Html.DropDownListFor(model => item.discipline.EmployeeID, (IEnumerable<SelectListItem>)ViewBag.EmployeeList, "Mã nhân viên", new { @class = "form-control search-select", @id = "EmployeeID", @name = "EmployeeID" })
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.FirstName <span class="required">*</span></label>
+                                <input type="text" readonly id="Fullname" name="Fullname" value="@item.employee.FullName" class="form-control" placeholder="Tên nhân viên">
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.Department<span class="required">*</span></label>
+                                <input type="text" id="DepartmentID" readonly name="DepartmentID" value="@item.department.NameDepartmentVN" class="form-control" placeholder="Default Input">
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.Date <span class="required">*</span></label>
+                                @Html.TextBoxFor(model => @item.discipline.DateDiscipline, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date", @id = "DateDiscipline", @name = "DateDiscipline" })
+                            </div>
+
+
+
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.ApproveBy <span class="required">*</span></label>
+                                @Html.DropDownListFor(model => item.discipline.ApproveBy, (IEnumerable<SelectListItem>)ViewBag.ApproveBy, "Người duyệt", new { @class = "form-control search-select", @id = "ApproveBy", @name = "ApproveBy" })
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.ApproveDate <span class="required">*</span></label>
+                                @Html.TextBoxFor(model => @item.discipline.ApproveDate, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date", @id = "ApproveDate", @name = "ApproveDate" })
+                            </div>
+
+
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.File <span class="required">*</span></label>
+                                @if (!string.IsNullOrEmpty(@item.discipline.FileDiscipline))
+                                {
+                                    <a href="@Url.Action("DownloadFile", "Discipline", new { filename = @item.discipline.FileDiscipline })" class="btn btn-info btn-xs"><i class="fa fa-file"></i></a>
+                                }
+                                <input type="file" style="margin-top:15px" id="FileDiscipline" name="FileDiscipline" value="@item.discipline.FileDiscipline" class="form-control-file">
+                            </div>
+
+                            <div class="col-md-12 col-sm-12  form-group has-feedback" style="margin-top:15px;">
+                                @if (HRManager.Common.setRole.Role_HR_update)
+                                {
+                                    <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                                }
+                            </div>
+                        }
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

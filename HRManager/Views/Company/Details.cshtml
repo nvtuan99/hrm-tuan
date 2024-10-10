@@ -1,0 +1,133 @@
+﻿@model HRManager.tblCompany
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Edit", "Company", FormMethod.Post))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.Update @Resources.Content.Company</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">
+                                @Resources.Content.CompanyCode <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" name="ID" value="@Html.DisplayFor(model => model.ID)" readonly="readonly" class="form-control" placeholder="@Resources.Content.CompanyCode">
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.CompanyName VN <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required name="NameCompanyVN" value="@Html.DisplayFor(model => model.NameCompanyVN)" class="form-control" placeholder="@Resources.Content.CompanyName VN">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.Company EN <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required name="NameCompanyEN" value="@Html.DisplayFor(model => model.NameCompanyEN)" class="form-control" placeholder="@Resources.Content.CompanyName EN">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.Address <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required name="Address" value="@Html.DisplayFor(model => model.Address)" class="form-control" placeholder="@Resources.Content.Address">
+                            </div>
+                        </div>
+
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.Phone <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required name="Phone" value="@Html.DisplayFor(model => model.Phone)" class="form-control" placeholder="@Resources.Content.Phone">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.Tax <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required name="Tax" value="@Html.DisplayFor(model => model.Tax)" class="form-control" placeholder="@Resources.Content.Tax">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.LegalRepresentative <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required name="Deputy" value="@Html.DisplayFor(model => model.Deputy)" class="form-control" placeholder="@Resources.Content.Deputy">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.Title <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required name="Title" value="@Html.DisplayFor(model => model.Title)" class="form-control" placeholder="@Resources.Content.Title">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.Status
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <select class="form-control" name="isActive">
+                                    @if (Model.isActive == true)
+                                    {
+                                        <option selected value="1">@Resources.Content.Active</option>
+                                        <option value="0">@Resources.Content.InActive</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="1">@Resources.Content.Active</option>
+                                        <option selected value="0">@Resources.Content.InActive</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ln_solid"></div>
+                        <div class="item form-group">
+                            <div class="col-md-6 col-sm-6 offset-md-3">
+                                @if (HRManager.Common.setRole.Role_HRCategory_update)
+                                {
+                                    <button type="submit" class="btn btn-success">@Resources.Content.Save</button>
+                                }
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+

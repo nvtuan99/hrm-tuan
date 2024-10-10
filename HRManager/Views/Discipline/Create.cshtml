@@ -1,0 +1,81 @@
+﻿@model HRManager.tblDiscipline
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Create", "Discipline", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.Discipline</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                        <div class="col-md-6 col-sm-6">
+                            <label>@Resources.Content.DisciplineNo<span class="required">*</span></label>
+                            <input type="text" id="NoDiscipline"  name="NoDiscipline" required class="form-control" placeholder="@Resources.Content.DisciplineNo">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label>@Resources.Content.DisciplineType </label>
+                            @Html.DropDownListFor(model => model.TypeDiscipline, ViewBag.DisciplineType as SelectList, "Loại kỉ luật", new { @class = "form-control search-select", id = "TypeDiscipline", required = "required" })
+                        </div>
+
+                        <div class="col-md-12 col-sm-12" style="margin-top:15px;">
+                            <label>@Resources.Content.RewardReason <span class="required">*</span></label>
+                            <input type="text" id="Reason" name="Reason" class="form-control" placeholder="Reason" required>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.EmployeeCode <span class="required">*</span></label>
+                            @Html.DropDownListFor(model => model.EmployeeCode, ViewBag.EmployeeList as SelectList, "Mã nhân viên", new { @class = "form-control search-select", id = "EmployeeID", required = "required" })
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.FirstName <span class="required">*</span></label>
+                            <input type="text" readonly id="Fullname" name="Fullname" class="form-control" placeholder="Tên nhân viên">
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.Department<span class="required">*</span></label>
+                            <input type="text" id="DepartmentID" readonly name="DepartmentID" class="form-control" placeholder="Default Input">
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.Date <span class="required">*</span></label>
+                            <input type="text" id="DateDiscipline" name="DateDiscipline" required class="form-control" placeholder="@Resources.Content.ApproveDate">
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.ApproveBy <span class="required">*</span></label>
+                            @Html.DropDownListFor(model => model.ApproveBy, ViewBag.ApproveBy as SelectList, "Người duyệt", new { @class = "form-control search-select", id = "ApproveBy", required = "required" })
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.ApproveDate <span class="required">*</span></label>
+                            <input type="text" id="ApproveDate" name="ApproveDate" required class="form-control" placeholder="@Resources.Content.ApproveDate">
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.File </label>
+                            <input type="file" style="margin-top:15px" id="FileDiscipline" name="FileDiscipline" class="form-control-file">
+                        </div>
+                        <div class="col-md-12 col-sm-12  form-group has-feedback" style="margin-top:15px;">
+                            <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

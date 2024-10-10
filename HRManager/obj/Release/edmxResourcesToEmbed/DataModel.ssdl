@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HRManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblAllowance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AllowanceCategoryID" Type="int" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblAllowanceCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AllowanceNameVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="AllowanceNameEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="Money" Type="float" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblAnnualLeave">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="AnnualLeave" Type="float" />
+    <Property Name="DateLastUpdate" Type="date" />
+    <Property Name="ReasonUpdate" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblAnnualLeaveDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="LeaveID" Type="int" />
+    <Property Name="TypeAction" Type="nvarchar" MaxLength="50" />
+    <Property Name="QtyAnnualLeave" Type="float" />
+    <Property Name="QtyAnnualLeaveFinal" Type="float" />
+    <Property Name="Detail" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblCompany">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameCompanyVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameCompanyEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Phone" Type="nchar" MaxLength="20" />
+    <Property Name="Tax" Type="nchar" MaxLength="10" />
+    <Property Name="Deputy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblContract">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="ContractCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeContractID" Type="int" />
+    <Property Name="DateSign" Type="datetime" />
+    <Property Name="DateStart" Type="datetime" />
+    <Property Name="DateEnd" Type="datetime" />
+    <Property Name="Salary" Type="int" />
+    <Property Name="Allowance" Type="int" />
+    <Property Name="PayForms" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayDate" Type="int" />
+    <Property Name="WorkingTimeAM" Type="nvarchar" MaxLength="50" />
+    <Property Name="WorkingTimePM" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContractPlace" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileContract" Type="nvarchar" MaxLength="500" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblDegree">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DegreeVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="DegreeEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="500" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameDepartmentVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameDepartmentEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblDiscipline">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="EmployeeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateDiscipline" Type="datetime" />
+    <Property Name="NoDiscipline" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeDiscipline" Type="int" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileDiscipline" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApproveBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApproveDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblDisciplineType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblEducation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="School" Type="nvarchar" MaxLength="50" />
+    <Property Name="DegreeID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Majors" Type="nvarchar" MaxLength="50" />
+    <Property Name="FromDate" Type="date" />
+    <Property Name="ToDate" Type="date" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CommonName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="bit" Nullable="false" />
+    <Property Name="Images" Type="nvarchar" MaxLength="255" />
+    <Property Name="Birthday" Type="date" />
+    <Property Name="PlaceOfBirth" Type="nvarchar" MaxLength="50" />
+    <Property Name="Married" Type="bit" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddressTmp" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="CCCD" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateCCCD" Type="datetime" />
+    <Property Name="IssuedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateStartWord" Type="datetime" />
+    <Property Name="Health" Type="nvarchar" MaxLength="50" />
+    <Property Name="Height" Type="int" />
+    <Property Name="Weight" Type="int" />
+    <Property Name="StatusWork" Type="int" />
+    <Property Name="NationalityID" Type="int" />
+    <Property Name="NationID" Type="int" />
+    <Property Name="ReligionID" Type="int" />
+    <Property Name="DegreeID" Type="int" />
+    <Property Name="ForeignID" Type="nvarchar" MaxLength="50" />
+    <Property Name="BHXH" Type="bit" />
+    <Property Name="BHYT" Type="bit" />
+    <Property Name="BHTN" Type="bit" />
+    <Property Name="UnionDues" Type="bit" />
+    <Property Name="Note" Type="ntext" />
+    <Property Name="CreatedByUser" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedByDate" Type="datetime" />
+    <Property Name="MaritalID" Type="int" />
+    <Property Name="Authority" Type="bit" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="500" />
+    <Property Name="DepartmentID" Type="int" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserLastUpdated" Type="nvarchar" MaxLength="50" />
+    <Property Name="PositionID" Type="int" />
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="NoBHXH" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateBHXH" Type="datetime" />
+    <Property Name="IssueByBHXH" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoBHYT" Type="nvarchar" MaxLength="50" />
+    <Property Name="fromDateBHYT" Type="datetime" />
+    <Property Name="toDateBHYT" Type="datetime" />
+    <Property Name="ProvinceBHYT" Type="nvarchar" MaxLength="50" />
+    <Property Name="HopitalBHYT" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="LeaderID" Type="int" />
+    <Property Name="ManagerID" Type="int" />
+    <Property Name="Salary" Type="float" />
+  </EntityType>
+  <EntityType Name="tblEmployeeCard">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="EmployeeCardID" Type="nchar" MaxLength="50" />
+    <Property Name="TypeEmployeeCardID" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblForeignLanguage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ForeignLanguageVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="ForeignLanguageEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblHistoryTimekeeping">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="TimeKeeperID" Type="int" />
+    <Property Name="TimekeepingDate" Type="date" />
+    <Property Name="TimekeepingHour" Type="time" Precision="7" />
+    <Property Name="TypeInputID" Type="int" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblHistoryWork">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="Company" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PositionID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="JobID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FromDate" Type="date" Nullable="false" />
+    <Property Name="ToDate" Type="date" Nullable="false" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblHoliday">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YearHoliday" Type="int" />
+    <Property Name="NameHolidayVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameHolidayEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="fromDateHoliday" Type="date" />
+    <Property Name="toDateHoliday" Type="date" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblISalaryFormula">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BHYT" Type="float" />
+    <Property Name="BHTN" Type="float" />
+    <Property Name="BHXH" Type="float" />
+    <Property Name="BHXHMax" Type="float" />
+    <Property Name="UnionDues" Type="float" />
+    <Property Name="UnionDuesMax" Type="float" />
+    <Property Name="Overtime" Type="float" />
+    <Property Name="OvertimeSunday" Type="float" />
+    <Property Name="OvertimeHoliday" Type="float" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblLeave">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="TypeLeaveID" Type="int" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="500" />
+    <Property Name="fromDate" Type="datetime" />
+    <Property Name="toDate" Type="datetime" />
+    <Property Name="totalHours" Type="float" />
+    <Property Name="totalDay" Type="float" />
+    <Property Name="ApproveByLeader" Type="bit" />
+    <Property Name="DateApproveByLeader" Type="datetime" />
+    <Property Name="ApproveByManager" Type="bit" />
+    <Property Name="DateApproveByManager" Type="datetime" />
+    <Property Name="ApproveByHR" Type="bit" />
+    <Property Name="DateApproveByHR" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblLeaveDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LeaveID" Type="int" />
+    <Property Name="LeaveDate" Type="date" />
+    <Property Name="LeaveQtyHours" Type="float" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblMaritalStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaritalStatusVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaritalStatusEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblNation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameNationVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameNationEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblNationality">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameNationalityVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameNationalityEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblOvertime">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="150" />
+    <Property Name="DateOvertime" Type="date" />
+    <Property Name="FromTime" Type="time" Precision="7" />
+    <Property Name="ToTime" Type="time" Precision="7" />
+    <Property Name="totalHours" Type="float" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+    <Property Name="isApprove" Type="bit" />
+    <Property Name="UserApprove" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateApprove" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblPosition">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PositionNameVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="PositionNameEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblProvince">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="NameProvinceVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameProvinceEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblRelationship">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="Fullname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Relationship" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="date" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblRelationshipType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationshipNameVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="RelationshipNameEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblReligion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameReligionVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameReligionEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblReward">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="EmployeeCode" Type="nchar" MaxLength="20" />
+    <Property Name="DateReward" Type="datetime" />
+    <Property Name="NoReward" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeReward" Type="int" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="50" />
+    <Property Name="RewardForm" Type="nvarchar" MaxLength="50" />
+    <Property Name="Money" Type="int" />
+    <Property Name="FileReward" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApproveBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApproveDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblRewardForm">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RewardFormVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="RewardFormEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="CategoryRole" Type="int" />
+    <Property Name="RoleView" Type="bit" />
+    <Property Name="RoleUpdate" Type="bit" />
+    <Property Name="RoleDelete" Type="bit" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdate" Type="datetime" />
+    <Property Name="UserUpdate" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblRoleCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryNameVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="CategoryNameEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblSalarySheet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SalarySheetYear" Type="int" />
+    <Property Name="SalarySheetMonth" Type="int" />
+    <Property Name="DateCreate" Type="date" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="date" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblSalarySheetAllowance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SalarySheetID" Type="int" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="AllowanceID" Type="int" />
+    <Property Name="AllowanceMoney" Type="float" />
+    <Property Name="DateCreate" Type="datetime" />
+    <Property Name="UserCreate" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdate" Type="datetime" />
+    <Property Name="UserUpdate" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblSalarySheetDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="SalarySheetID" Type="int" />
+    <Property Name="BasicSalary" Type="float" />
+    <Property Name="TimesheetDetailID" Type="int" />
+    <Property Name="MoneyWork" Type="float" />
+    <Property Name="MoneyOvertime" Type="float" />
+    <Property Name="MoneySunday" Type="float" />
+    <Property Name="MoneyHoliday" Type="float" />
+    <Property Name="MoneyUnpaidLeave" Type="float" />
+    <Property Name="MoneyPadLeave" Type="float" />
+    <Property Name="BHXH" Type="float" />
+    <Property Name="BHYT" Type="float" />
+    <Property Name="BHTN" Type="float" />
+    <Property Name="UnionDues" Type="float" />
+    <Property Name="TotalAllowance" Type="float" />
+    <Property Name="TotalSalary" Type="float" />
+    <Property Name="DateCreate" Type="datetime" />
+    <Property Name="UserCreate" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdate" Type="datetime" />
+    <Property Name="UserUpdate" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblShiftArrange">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="WorkingShiftID" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Month" Type="int" />
+    <Property Name="fromDate" Type="date" />
+    <Property Name="toDate" Type="date" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblStatusWork">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusWorkVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusWorkEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblSysAction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActiveLog" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblSysFunction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FunctionLog" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblSysLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountLogin" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateLog" Type="datetime" />
+    <Property Name="FunctionLog" Type="int" />
+    <Property Name="ActionLog" Type="int" />
+    <Property Name="ObjectLog" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTimeKeeper">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TimeKeeperNameVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeKeeperNameEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="IPAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateBuy" Type="date" />
+    <Property Name="DateWarranty" Type="date" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTimesheet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TimesheetYear" Type="int" />
+    <Property Name="TimesheetMonth" Type="int" />
+    <Property Name="fromDate" Type="date" />
+    <Property Name="toDate" Type="date" />
+    <Property Name="DateCreate" Type="date" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="date" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblTimesheetDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TimesheetCode" Type="int" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="totalDayWork" Type="float" />
+    <Property Name="totalHourWork" Type="float" />
+    <Property Name="totalHourOvertime" Type="float" />
+    <Property Name="totalHourOvertimeSunday" Type="float" />
+    <Property Name="totalHourOvertimeHoliday" Type="float" />
+    <Property Name="totalDayLeave" Type="float" />
+    <Property Name="totalHourLeave" Type="float" />
+    <Property Name="totalDayAbsent" Type="float" />
+    <Property Name="totalHourAbsent" Type="float" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTypeContract">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameContractVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameContractEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="QtyMonth" Type="int" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTypeEmployeeCard">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeCardVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeCardEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTypeInputTimekeeping">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeInputTimeKeepingVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeInputTimeKeepingEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTypeLeave">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeLeaveVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeLeaveEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTypeReward">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblWorkingShift">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkingShiftVN" Type="nvarchar" MaxLength="50" />
+    <Property Name="WorkingShiftEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="fromTimeAM" Type="time" Precision="7" />
+    <Property Name="toTimeAM" Type="time" Precision="7" />
+    <Property Name="fromTimePM" Type="time" Precision="7" />
+    <Property Name="toTimePM" Type="time" Precision="7" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserUpdated" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="DateCreate" Type="datetime" />
+    <Property Name="DateUpdate" Type="datetime" />
+    <Property Name="UserCreate" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserUpdate" Type="nvarchar" MaxLength="50" />
+    <Property Name="RoleList" Type="nvarchar" MaxLength="50" />
+    <Property Name="isManagement" Type="bit" />
+    <Property Name="AccountStatus" Type="int" />
+    <Property Name="IPLastLogin" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateLastLogin" Type="datetime" />
+    <Property Name="TimeNextLogin" Type="datetime" />
+    <Property Name="CountLoginFailed" Type="int" />
+  </EntityType>
+  <EntityContainer Name="HRManagerModelStoreContainer">
+    <EntitySet Name="tblAllowance" EntityType="Self.tblAllowance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAllowanceCategory" EntityType="Self.tblAllowanceCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAnnualLeave" EntityType="Self.tblAnnualLeave" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAnnualLeaveDetail" EntityType="Self.tblAnnualLeaveDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCompany" EntityType="Self.tblCompany" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblContract" EntityType="Self.tblContract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDegree" EntityType="Self.tblDegree" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDiscipline" EntityType="Self.tblDiscipline" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDisciplineType" EntityType="Self.tblDisciplineType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEducation" EntityType="Self.tblEducation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEmployee" EntityType="Self.tblEmployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEmployeeCard" EntityType="Self.tblEmployeeCard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblForeignLanguage" EntityType="Self.tblForeignLanguage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblHistoryTimekeeping" EntityType="Self.tblHistoryTimekeeping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblHistoryWork" EntityType="Self.tblHistoryWork" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblHoliday" EntityType="Self.tblHoliday" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblISalaryFormula" EntityType="Self.tblISalaryFormula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLeave" EntityType="Self.tblLeave" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLeaveDetail" EntityType="Self.tblLeaveDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMaritalStatus" EntityType="Self.tblMaritalStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblNation" EntityType="Self.tblNation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblNationality" EntityType="Self.tblNationality" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblOvertime" EntityType="Self.tblOvertime" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPosition" EntityType="Self.tblPosition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProvince" EntityType="Self.tblProvince" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRelationship" EntityType="Self.tblRelationship" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRelationshipType" EntityType="Self.tblRelationshipType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblReligion" EntityType="Self.tblReligion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblReward" EntityType="Self.tblReward" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRewardForm" EntityType="Self.tblRewardForm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRole" EntityType="Self.tblRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRoleCategory" EntityType="Self.tblRoleCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSalarySheet" EntityType="Self.tblSalarySheet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSalarySheetAllowance" EntityType="Self.tblSalarySheetAllowance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSalarySheetDetail" EntityType="Self.tblSalarySheetDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblShiftArrange" EntityType="Self.tblShiftArrange" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStatusWork" EntityType="Self.tblStatusWork" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysAction" EntityType="Self.tblSysAction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysFunction" EntityType="Self.tblSysFunction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSysLog" EntityType="Self.tblSysLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTimeKeeper" EntityType="Self.tblTimeKeeper" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTimesheet" EntityType="Self.tblTimesheet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTimesheetDetail" EntityType="Self.tblTimesheetDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTypeContract" EntityType="Self.tblTypeContract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTypeEmployeeCard" EntityType="Self.tblTypeEmployeeCard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTypeInputTimekeeping" EntityType="Self.tblTypeInputTimekeeping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTypeLeave" EntityType="Self.tblTypeLeave" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTypeReward" EntityType="Self.tblTypeReward" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWorkingShift" EntityType="Self.tblWorkingShift" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

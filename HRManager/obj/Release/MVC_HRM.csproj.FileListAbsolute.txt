@@ -1,0 +1,348 @@
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\MVC_IWVN.dll.config
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\MVC_IWVN.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\MVC_IWVN.pdb
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\csc.exe
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\csc.exe.config
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\csc.rsp
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\csi.exe
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\csi.exe.config
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\csi.rsp
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.Managed.Core.targets
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.AppContext.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Collections.Immutable.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Console.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Globalization.Calendars.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.IO.Compression.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.IO.FileSystem.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Net.Http.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Net.Sockets.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Reflection.Metadata.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.ValueTuple.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Xml.XmlDocument.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Xml.XPath.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\vbc.exe
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\vbc.exe.config
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\vbc.rsp
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\VBCSCompiler.exe
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\roslyn\VBCSCompiler.exe.config
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Antlr3.Runtime.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\EntityFramework.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\EntityFramework.SqlServer.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\EPPlus.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\EPPlus.Interfaces.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\EPPlus.System.Drawing.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.DataSet.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\LinqToExcel.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authentication.Core.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authorization.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Extensions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Features.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Mvc.Core.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Routing.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.WebUtilities.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.DotNet.PlatformAbstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.DependencyInjection.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.DependencyModel.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.ObjectPool.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Options.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Primitives.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.IO.RecyclableMemoryStream.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Net.Http.Headers.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Owin.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Web.Infrastructure.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Newtonsoft.Json.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Owin.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Remotion.Data.Linq.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Remotion.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Remotion.Interfaces.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Buffers.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.ComponentModel.Annotations.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Diagnostics.DiagnosticSource.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Memory.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Numerics.Vectors.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Text.Encodings.Web.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Threading.Tasks.Extensions.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.Helpers.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.Mvc.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.Optimization.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.Razor.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.Deployment.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.Razor.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\WebGrease.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\EntityFramework.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\EntityFramework.SqlServer.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\EPPlus.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.pdb
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.DataSet.pdb
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.DataSet.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\LinqToExcel.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authentication.Core.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authorization.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Extensions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Features.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Mvc.Core.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Routing.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.WebUtilities.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.DependencyInjection.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.ObjectPool.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Options.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Primitives.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.IO.RecyclableMemoryStream.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Net.Http.Headers.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.Owin.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Buffers.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Diagnostics.DiagnosticSource.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Memory.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Numerics.Vectors.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Text.Encodings.Web.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Threading.Tasks.Extensions.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.Helpers.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.Mvc.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.Optimization.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.Razor.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.Deployment.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.Razor.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Newtonsoft.Json.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Antlr3.Runtime.pdb
+D:\SourceCode\MVC_HRM\MVC_IWVN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\SourceCode\MVC_HRM\MVC_IWVN\obj\Release\MVC_HRM.csproj.AssemblyReference.cache
+D:\SourceCode\MVC_HRM\MVC_IWVN\obj\Release\MVC_IWVN.App_GlobalResources.Content.vn.resources
+D:\SourceCode\MVC_HRM\MVC_IWVN\obj\Release\MVC_HRM.csproj.GenerateResource.cache
+D:\SourceCode\MVC_HRM\MVC_IWVN\obj\Release\MVC_HRM.csproj.CoreCompileInputs.cache
+D:\SourceCode\MVC_HRM\MVC_IWVN\obj\Release\MVC_HRM.csproj.CopyComplete
+D:\SourceCode\MVC_HRM\MVC_IWVN\obj\Release\MVC_IWVN.dll
+D:\SourceCode\MVC_HRM\MVC_IWVN\obj\Release\MVC_IWVN.pdb
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\MVC_IWVN.dll.config
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\MVC_IWVN.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\MVC_IWVN.pdb
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\csc.exe
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\csc.exe.config
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\csc.rsp
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\csi.exe
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\csi.exe.config
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\csi.rsp
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.AppContext.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Console.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.IO.Compression.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Net.Http.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Net.Sockets.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.ValueTuple.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Xml.XPath.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\vbc.exe
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\vbc.exe.config
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\vbc.rsp
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\VBCSCompiler.exe
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Antlr3.Runtime.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\EntityFramework.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\EntityFramework.SqlServer.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\EPPlus.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\EPPlus.Interfaces.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\EPPlus.System.Drawing.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.DataSet.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\LinqToExcel.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authorization.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Routing.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.DependencyModel.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.ObjectPool.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Options.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Owin.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Newtonsoft.Json.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Owin.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Remotion.Data.Linq.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Remotion.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Remotion.Interfaces.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Buffers.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.ComponentModel.Annotations.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Memory.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Numerics.Vectors.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Text.Encodings.Web.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.Helpers.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.Mvc.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.Optimization.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.Razor.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.Deployment.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.Razor.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\WebGrease.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\EntityFramework.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\EntityFramework.SqlServer.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\EPPlus.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.pdb
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.DataSet.pdb
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\ExcelDataReader.DataSet.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\LinqToExcel.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authentication.Core.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authorization.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Routing.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.AspNetCore.WebUtilities.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.ObjectPool.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Options.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.Owin.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Buffers.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Memory.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Numerics.Vectors.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Text.Encodings.Web.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.Helpers.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.Mvc.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.Optimization.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.Razor.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.Deployment.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\System.Web.WebPages.Razor.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Newtonsoft.Json.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Antlr3.Runtime.pdb
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\obj\Release\MVC_HRM.csproj.AssemblyReference.cache
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\obj\Release\MVC_IWVN.App_GlobalResources.Content.vn.resources
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\obj\Release\MVC_HRM.csproj.GenerateResource.cache
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\obj\Release\MVC_HRM.csproj.CoreCompileInputs.cache
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\obj\Release\MVC_HRM.csproj.Up2Date
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\obj\Release\MVC_IWVN.dll
+C:\Users\TIEN1\OneDrive\Máy tính\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\obj\Release\MVC_IWVN.pdb

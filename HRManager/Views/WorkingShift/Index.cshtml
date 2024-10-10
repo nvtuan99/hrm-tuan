@@ -1,0 +1,84 @@
+﻿@model IEnumerable<HRManager.tblWorkingShift>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>@Resources.Content.WorkingShift</h3>
+        </div>
+        <div class="title_right">
+            @if (HRManager.Common.setRole.Role_HR_update)
+            {
+                <a href="@Url.Action("Create","WorkingShift")" class="btn btn-info btn-xs" style="float:right"><i class="fa fa-plus"></i></a>
+            }
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-box table-responsive">
+                                <table id="dtOvertime" class="table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th style="display:none">ID</th>
+                                            <th>@Resources.Content.WorkingShiftName VN</th>
+                                            <th>@Resources.Content.WorkingShiftName EN</th>
+                                            <th>@Resources.Content.HourStart AM</th>
+                                            <th>@Resources.Content.HourEnd AM</th>
+                                            <th>@Resources.Content.HourStart PM</th>
+                                            <th>@Resources.Content.HourEnd PM</th>
+                                            <th>@Resources.Content.Note</th>
+                                            <th>@Resources.Content.Status</th>
+                                            <th>#</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td style="display: none">@Html.DisplayFor(modelItem => item.ID)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.WorkingShiftVN)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.WorkingShiftEN)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.fromTimeAM)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.toTimeAM)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.fromTimePM)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.toTimePM)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Note)</td>
+                                                <td>
+                                                    @if (item.isActive != true)
+                                                    {
+                                                        <span>Ẩn</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span>Hiện</span>
+                                                    }
+
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("Details", "WorkingShift", new { id = @item.ID })" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i>  </a>
+                                                    <a href="" class="btn btn-danger btn-xs" onclick="return confirmDelete(@item.ID);"><i class="fa fa-trash-o"></i>  </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

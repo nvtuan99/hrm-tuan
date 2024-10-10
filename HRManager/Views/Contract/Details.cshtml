@@ -1,0 +1,216 @@
+﻿@model HRManager.tblContract
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Details", "Contract", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.Add @Resources.Content.Contract</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">@Resources.Content.PartiesInvolved</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="work-tab" data-toggle="tab" href="#work" role="tab" aria-controls="work" aria-selected="false">@Resources.Content.Information @Resources.Content.Contract</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="x_panel">
+                                <div class="x_content">
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <h4>@Resources.Content.Party A</h4>
+
+                                        <br />
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <label>@Resources.Content.Company</label>
+                                            @Html.DropDownListFor(model => model.CompanyID, ViewBag.CompanyList as SelectList, @Resources.Content.Company, new { @class = "form-control search-select", id = "CompanyID", required = "required" })
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <label>@Resources.Content.Phone</label>
+                                            <input type="text" readonly id="phoneCompany" value="@ViewBag.CompanyPhone" class="form-control" placeholder="@Resources.Content.Phone">
+                                        </div>
+
+                                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                                            <label>@Resources.Content.Address</label>
+                                            <input type="text" readonly id="addressCompany" class="form-control" value="@ViewBag.CompanyAddress" placeholder="@Resources.Content.Address">
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <label>@Resources.Content.Tax</label>
+                                            <input type="text" readonly id="taxCompany" class="form-control" value="@ViewBag.CompanyTax" placeholder="@Resources.Content.Tax">
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <label>@Resources.Content.Deputy</label>
+                                            <input type="text" readonly id="deputyCompany" class="form-control" value="@ViewBag.CompanyDeputy" placeholder="@Resources.Content.Deputy">
+                                        </div>
+
+                                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                                            <label>@Resources.Content.PositionDeputy</label>
+                                            <input type="text" readonly id="positionDeputyCompany" class="form-control" value="@ViewBag.CompanyTitle" placeholder="@Resources.Content.PositionDeputy">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback" style="margin-top:20px">
+                                        <h4>@Resources.Content.Party B</h4>
+
+                                        <br />
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <label>@Resources.Content.EmployeeCode</label>
+                                            @Html.DropDownListFor(model => model.EmployeeID, ViewBag.EmployeeList as SelectList, @Resources.Content.EmployeeCode, new { @class = "form-control search-select", id = "EmployeeID", required = "required" })
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <label>@Resources.Content.FirstName <span class="required">*</span></label>
+                                            <input type="text" readonly id="Fullname" name="Fullname" value="@ViewBag.Fullname" class="form-control" placeholder="@Resources.Content.FullName">
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <label>@Resources.Content.Department<span class="required">*</span></label>
+                                            <input type="text" id="DepartmentID" readonly value="@ViewBag.DepartmentName" name="DepartmentID" class="form-control" placeholder="@Resources.Content.Department">
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            <label>@Resources.Content.Position<span class="required">*</span></label>
+                                            <input type="text" id="PositionID" readonly name="PositionID" value="@ViewBag.PositionName" class="form-control" placeholder="@Resources.Content.Position">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="work" role="tabpanel" aria-labelledby="work-tab">
+                            <div class="x_panel">
+                                <div class="x_content">
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <h4>Thông tin hợp đồng</h4>
+                                        <br />
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.ContractCode </label>
+                                            <input type="text" id="ContractCode" required value="@Html.DisplayFor(model => model.ContractCode)" class="form-control" placeholder="ContractCode" name="ContractCode">
+
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.TypeContract </label>
+                                            @Html.DropDownListFor(model => model.TypeContractID, ViewBag.TypeContract as SelectList, @Resources.Content.TypeContract, new { @class = "form-control search-select", id = "TypeContractID", required = "required" })
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Duration <span class="required">*</span></label>
+                                            <input type="text" readonly id="QtyMonth" name="QtyMonth" class="form-control" placeholder="@Resources.Content.Duration">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.DateSign </label>
+                                            @Html.TextBoxFor(model => model.DateSign, "{0:yyyy-MM-dd}", new { @id = "DateSign", @class = "form-control", type = "text", required = "required" })
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.DateStart </label>
+                                            @Html.TextBoxFor(model => model.DateStart, "{0:yyyy-MM-dd}", new { @id = "DateStart", @class = "form-control", type = "text", required = "required" })
+                                        </div>
+
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.DateEnd </label>
+                                            @Html.TextBoxFor(model => model.DateEnd, "{0:yyyy-MM-dd}", new { @id = "DateEnd", @class = "form-control", type = "text", required = "required" })
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <h4>@Resources.Content.OtherInformation</h4>
+                                        <br />
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.SalaryBasic </label>
+                                            <input type="number" name="Salary" required class="form-control" value="@Html.DisplayFor(model => model.Salary)" placeholder="@Resources.Content.SalaryBasic">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Allowance </label>
+                                            <input type="number" name="Allowance" required class="form-control" value="@Html.DisplayFor(model => model.Allowance)" placeholder="@Resources.Content.Allowance">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.PayForms</label>
+                                            <select class="form-control" name="PayForms">
+                                                @if (Model.PayForms == "Transfer")
+                                                {
+                                                    <option selected value="Transfer">@Resources.Content.Transfer</option>
+                                                    <option value="Cash">@Resources.Content.Cash</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="Transfer">@Resources.Content.Transfer</option>
+                                                    <option selected value="Cash">@Resources.Content.Cash</option>
+                                                }
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.PayDate </label>
+                                            <input type="number" value="@Html.DisplayFor(model => model.PayDate)" name="PayDate" required class="form-control" placeholder="@Resources.Content.PayDate">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.WorkingTimeAM </label>
+                                            <input type="text" name="WorkingTimeAM" required class="form-control" value="@Html.DisplayFor(model => model.WorkingTimeAM)" placeholder="@Resources.Content.WorkingTimeAM">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.WorkingTimePM </label>
+                                            <input type="text" name="WorkingTimePM" required class="form-control" value="@Html.DisplayFor(model => model.WorkingTimePM)" placeholder="@Resources.Content.WorkingTimePM">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.ContractPlace </label>
+                                            <input type="text" name="ContractPlace" required class="form-control" value="@Html.DisplayFor(model => model.ContractPlace)" placeholder="">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Note </label>
+                                            <input type="text" name="Note" required class="form-control" value="@Html.DisplayFor(model => model.Note)" placeholder="@Resources.Content.Note">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.File <span class="required">*</span></label>
+                                            @if (!string.IsNullOrEmpty(Model.FileContract))
+                                            {
+                                                <a href="@Url.Action("DownloadFile", "Contract", new { filename = Model.FileContract })" class="btn btn-info btn-xs"><i class="fa fa-file"></i></a>
+                                            }
+                                            <input type="file" style="margin-top:15px" id="FileContract" name="FileContract" value="@Model.FileContract" class="form-control-file">
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                        <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+

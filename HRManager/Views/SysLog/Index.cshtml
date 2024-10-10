@@ -1,0 +1,59 @@
+﻿@model IEnumerable<HRManager.Models.ViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>@Resources.Content.SystemLog</h3>
+        </div>
+
+        <div class="title_right">
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-box table-responsive">
+                                <table id="dtSyslog" class="table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>@Resources.Content.Account</th>
+                                            <th>@Resources.Content.Date</th>
+                                            <th>@Resources.Content.Function</th>
+                                            <th>@Resources.Content.Action</th>
+                                            <th>@Resources.Content.Object</th>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@Html.DisplayFor(modelItem => item.sysLog.AccountLogin)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.sysLog.DateLog)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.sysFunction.FunctionLog)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.sysAction.ActiveLog)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.sysLog.ObjectLog)</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

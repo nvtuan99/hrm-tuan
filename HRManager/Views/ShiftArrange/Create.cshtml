@@ -1,0 +1,80 @@
+﻿@model HRManager.tblShiftArrange
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Create", "ShiftArrange", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.ShiftArrange</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.EmployeeCode</label>
+                            @Html.DropDownListFor(model => model.EmployeeID, ViewBag.EmployeeList as SelectList, @Resources.Content.EmployeeCode, new { @class = "form-control search-select", id = "EmployeeID", onchange = "CheckShiftArrangeIsExist()" , required = "required" })
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.FirstName <span class="required">*</span></label>
+                            <input type="text" readonly id="Fullname" name="Fullname" value="@ViewBag.Fullname" class="form-control" placeholder="@Resources.Content.FullName">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Department<span class="required">*</span></label>
+                            <input type="text" id="DepartmentID" readonly value="@ViewBag.DepartmentName" name="DepartmentID" class="form-control" placeholder="@Resources.Content.Department">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Position<span class="required">*</span></label>
+                            <input type="text" id="PositionID" readonly name="PositionID" class="form-control" placeholder="@Resources.Content.Position">
+                        </div>
+
+
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Year</label>
+                            <input onchange="CheckShiftArrangeIsExist()" type="number" id="Year" name="Year" value="@DateTime.Now.ToString("yyyy")" class="form-control" />
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Month </label>
+                            <input onchange="CheckShiftArrangeIsExist()" type="text" id="Month" name="Month" value="@DateTime.Now.ToString("MM")" class="form-control" placeholder="@Resources.Content.Month" />
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.FromDate </label>
+                            <input type="text" id="fromDate" name="fromDate" required class="form-control" placeholder="@Resources.Content.FromDate" />
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.ToDate </label>
+                            <input type="text" id="toDate" class="form-control" required onchange="validateAndCalculate()" placeholder="@Resources.Content.ToDate" name="toDate">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.WorkingShift </label>
+                            @Html.DropDownListFor(model => model.WorkingShiftID, ViewBag.workingShiftID as SelectList, @Resources.Content.WorkingShift, new { @class = "form-control search-select", id = "WorkingShift" , @required = (string)null  })
+                        </div>
+
+
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <button type="submit" disabled class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px" id="createShiftArrange">@Resources.Content.Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+

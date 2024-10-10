@@ -1,0 +1,76 @@
+﻿@model IEnumerable<HRManager.Models.ViewModel>
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>@Resources.Content.Timesheets @ViewBag.TimesheetCode</h3>
+        </div>
+        <div class="title_right">
+            @if (HRManager.Common.setRole.Role_HR_update)
+            {
+            }
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-box table-responsive">
+                                <table id="dtOvertime" class="table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th style="display:none">ID</th>
+                                            <th>@Resources.Content.EmployeeCode</th>
+                                            <th>@Resources.Content.Employee</th>
+                                            <th>@Resources.Content.TotalDayWork</th>
+                                            <th>@Resources.Content.TotalHourWork</th>
+                                            <th>@Resources.Content.TotalHourOvertime</th>
+                                            <th>@Resources.Content.TotalHourSunday</th>
+                                            <th>@Resources.Content.TotalHourHoliday</th>
+                                            <th>@Resources.Content.TotalDayLeave</th>
+                                            <th>@Resources.Content.TotalHourLeave</th>
+                                            <th>@Resources.Content.TotalDayAbsent</th>
+                                            <th>@Resources.Content.TotalHourAbsent</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td style="display: none">@Html.DisplayFor(modelItem => item.employee.ID)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.employee.EmployeeCode)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.employee.FirstName) @Html.DisplayFor(modelItem => item.employee.FullName)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.timesheetDetail.totalDayWork)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.timesheetDetail.totalHourWork)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.timesheetDetail.totalHourOvertime)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.timesheetDetail.totalHourOvertimeSunday)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.timesheetDetail.totalHourOvertimeHoliday)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.timesheetDetail.totalDayLeave)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.timesheetDetail.totalHourLeave)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.timesheetDetail.totalDayAbsent)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.timesheetDetail.totalHourAbsent)</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

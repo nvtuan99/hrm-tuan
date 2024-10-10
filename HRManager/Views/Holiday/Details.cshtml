@@ -1,0 +1,95 @@
+﻿@model HRManager.tblHoliday
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Details", "Holiday", FormMethod.Post))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.Update @Resources.Content.Holidays</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">
+                                @Resources.Content.HolidayName VN <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required name="NameHolidayVN" value="@Html.DisplayFor(model => model.NameHolidayVN)" class="form-control">
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.HolidayName EN <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required name="NameHolidayEN" value="@Html.DisplayFor(model => model.NameHolidayEN)" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.FromDate <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required id="fromDateHoliday" name="fromDateHoliday" value="@ViewBag.fromDateHoliday" class="form-control" onchange="validateDates()" />
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.ToDate <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required id="toDateHoliday" name="toDateHoliday" value="@ViewBag.toDateHoliday" class="form-control" onchange="validateDates()" />
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.Status
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <select class="form-control" name="isActive">
+                                    @if (Model.isActive == true)
+                                    {
+                                        <option selected value="1">@Resources.Content.Active</option>
+                                        <option value="0">@Resources.Content.InActive</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="1">@Resources.Content.Active</option>
+                                        <option selected value="0">@Resources.Content.InActive</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ln_solid"></div>
+                        <div class="item form-group">
+                            <div class="col-md-6 col-sm-6 offset-md-3">
+                                @if (HRManager.Common.setRole.Role_HRCategory_update)
+                                {
+                                    <button type="submit" class="btn btn-success">@Resources.Content.Save</button>
+                                }
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+

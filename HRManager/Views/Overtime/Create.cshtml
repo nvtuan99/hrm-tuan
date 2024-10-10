@@ -1,0 +1,73 @@
+﻿@model HRManager.tblOvertime
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Create", "Overtime", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.Overtime</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.EmployeeCode</label>
+                            @Html.DropDownListFor(model => model.EmployeeID, ViewBag.EmployeeList as SelectList, @Resources.Content.EmployeeCode, new { @class = "form-control search-select", id = "EmployeeID", required = "required" })
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.FirstName <span class="required">*</span></label>
+                            <input type="text" readonly id="Fullname" name="Fullname" value="@ViewBag.Fullname" class="form-control" placeholder="@Resources.Content.FullName">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Department<span class="required">*</span></label>
+                            <input type="text" id="DepartmentID" readonly value="@ViewBag.DepartmentName" name="DepartmentID" class="form-control" placeholder="@Resources.Content.Department">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Position<span class="required">*</span></label>
+                            <input type="text" id="PositionID" readonly name="PositionID" value="@ViewBag.PositionName" class="form-control" placeholder="@Resources.Content.Position">
+                        </div>
+
+
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <label>@Resources.Content.Reason </label>
+                            <input type="text" id="Reason" class="form-control" placeholder="@Resources.Content.Reason" name="Reason">
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Date @Resources.Content.Overtime</label>
+                            <input type="text" id="DateOvertime" name="DateOvertime" class="form-control" />
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.HourStart </label>
+                            <input type="text" id="FromTime" name="FromTime"  class="form-control" placeholder="@Resources.Content.HourStart" />
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.HourEnd </label>
+                            <input type="text" id="ToTime" class="form-control" onchange="validateAndCalculate()" placeholder="@Resources.Content.HourEnd" name="ToTime">
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.TotalHours </label>
+                            <input type="text" id="TotalHours" class="form-control" placeholder="@Resources.Content.TotalHours" name="TotalHours">
+                        </div>
+
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

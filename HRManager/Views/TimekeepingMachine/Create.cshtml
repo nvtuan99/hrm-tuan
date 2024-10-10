@@ -1,0 +1,71 @@
+﻿@model HRManager.tblTimeKeeper
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Create", "TimekeepingMachine", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.TimekeepingMachine</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.TimekeepingName VN</label>
+                            <input type="text" required id="TimeKeeperNameVN" name="TimeKeeperNameVN"  class="form-control" placeholder="@Resources.Content.TimekeepingName VN">
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.TimekeepingName EN</label>
+                            <input type="text" required id="TimeKeeperNameEN" name="TimeKeeperNameEN"  class="form-control" placeholder="@Resources.Content.TimekeepingName EN">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Location</label>
+                            <input type="text" required id="Location" name="Location"  class="form-control" placeholder="@Resources.Content.Location">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.IPAddress</label>
+                            <input type="text" id="IPAddress" name="IPAddress"  class="form-control" placeholder="@Resources.Content.IPAddress">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Brand</label>
+                            <input type="text" id="Brand" name="Brand"  class="form-control" placeholder="@Resources.Content.Brand">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Model</label>
+                            <input type="text" required id="Model" name="Model"  class="form-control" placeholder="@Resources.Content.Model">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.DateBuy</label>
+                            <input type="text" required id="DateBuy" name="DateBuy"  class="form-control" />
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.DateWarranty</label>
+                            <input type="text"  required id="DateWarranty" name="DateWarranty"  class="form-control" />
+                        </div>
+
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+

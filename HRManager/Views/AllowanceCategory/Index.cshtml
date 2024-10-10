@@ -1,0 +1,78 @@
+﻿@model IEnumerable<HRManager.tblAllowanceCategory>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>@Resources.Content.Allowance</h3>
+        </div>
+
+        <div class="title_right">
+            @if (HRManager.Common.setRole.Role_HRCategory_update)
+            {
+                <a href="@Url.Action("Create", "AllowanceCategory")" class="btn btn-primary btn-xs" style="float:right">@Resources.Content.Add</a>
+            }
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-box table-responsive">
+                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>@Resources.Content.Allowance VN</th>
+                                            <th>@Resources.Content.Allowance EN</th>
+                                            <th>@Resources.Content.Money</th>
+                                            <th>@Resources.Content.Status</th>
+                                            <th>#</th>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@Html.DisplayFor(modelItem => item.AllowanceNameVN)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.AllowanceNameEN)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Money)</td>
+                                                <td>
+                                                    @if (item.isActive == true)
+                                                    {
+                                                        <span>@Resources.Content.Active</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span>@Resources.Content.InActive</span>
+
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("Details", "AllowanceCategory", new { id = @item.ID })" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i>  </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+

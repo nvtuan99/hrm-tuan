@@ -1,0 +1,95 @@
+﻿@model IEnumerable<HRManager.Models.ViewModel>
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Details", "Reward", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.Reward</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-md-6 col-sm-6">
+                                <label>@Resources.Content.RewardNo<span class="required">*</span></label>
+                                <input type="text" id="NoReward" name="NoReward" value="@item.reward.NoReward" class="form-control" placeholder="@Resources.Content.RewardNo">
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <label>@Resources.Content.TypeReward </label>
+                                @Html.DropDownListFor(model => item.reward.TypeReward, (IEnumerable<SelectListItem>)ViewBag.TypeReward, "Loại khen thưởng", new { @class = "form-control search-select", @id = "TypeReward", @name = "TypeReward", required = "required" })
+                            </div>
+
+                            <div class="col-md-12 col-sm-12" style="margin-top:15px;">
+                                <label>@Resources.Content.RewardReason <span class="required">*</span></label>
+                                <input type="text" id="Reason" name="Reason" value="@item.reward.Reason" class="form-control" placeholder="@Resources.Content.RewardReason">
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.EmployeeCode <span class="required">*</span></label>
+                                @Html.DropDownListFor(model => item.reward.EmployeeID, (IEnumerable<SelectListItem>)ViewBag.EmployeeList, "Mã nhân viên", new { @class = "form-control search-select", @id = "EmployeeID", @name = "EmployeeID", required = "required" })
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.FirstName <span class="required">*</span></label>
+                                <input type="text" readonly id="Fullname" name="Fullname" value="@item.employee.FullName" class="form-control" placeholder="@Resources.Content.FirstName">
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.Department<span class="required">*</span></label>
+                                <input type="text" id="DepartmentID" readonly name="DepartmentID" value="@item.department.NameDepartmentVN" class="form-control" placeholder="@Resources.Content.Department">
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.DateReward <span class="required">*</span></label>
+                                @Html.TextBoxFor(model => @item.reward.DateReward, "{0:yyyy/MM/dd}", new { @class = "form-control", type = "text", @id = "DateReward", @name = "DateReward" })
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.RewardForm<span class="required">*</span></label>
+                                @Html.DropDownListFor(model => item.reward.RewardForm, (IEnumerable<SelectListItem>)ViewBag.RewardForm, @Resources.Content.RewardForm, new { @class = "form-control search-select", @id = "RewardForm", @name = "RewardForm" })
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.Money <span class="required">*</span></label>
+                                <input type="number" id="Money" required name="Money" value="@item.reward.Money" class="form-control" placeholder="@Resources.Content.Money">
+                            </div>
+
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.File <span class="required">*</span></label>
+                                @if (!string.IsNullOrEmpty(@item.reward.FileReward))
+                                {
+                                    <a href="@Url.Action("DownloadFile", "Reward", new { filename = @item.reward.FileReward })" class="btn btn-info btn-xs"><i class="fa fa-file"></i></a>
+                                }
+                                <input type="file" style="margin-top:15px" id="FileReward" name="FileReward" value="@item.reward.FileReward" class="form-control-file">
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.ApproveBy <span class="required">*</span></label>
+                                @Html.DropDownListFor(model => item.reward.ApproveBy, (IEnumerable<SelectListItem>)ViewBag.ApproveBy, "Người duyệt", new { @class = "form-control search-select", @id = "ApproveBy", @name = "ApproveBy" })
+                            </div>
+
+                            <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                                <label>@Resources.Content.ApproveDate <span class="required">*</span></label>
+                                @Html.TextBoxFor(model => @item.reward.ApproveDate, "{0:yyyy/MM/dd}", new { @class = "form-control", type = "text", @id = "ApproveDate", @name = "ApproveDate" })
+                            </div>
+
+                            <div class="col-md-12 col-sm-12  form-group has-feedback" style="margin-top:15px;">
+                                <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                            </div>
+                        }
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}

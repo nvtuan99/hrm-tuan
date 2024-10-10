@@ -1,0 +1,70 @@
+﻿@model HRManager.tblTimeKeeper
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Details", "TimekeepingMachine", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.TimekeepingMachine</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.TimekeepingName VN</label>
+                            <input type="text" id="TimeKeeperNameVN" name="TimeKeeperNameVN" value="@Html.DisplayFor(model => model.TimeKeeperNameVN)" class="form-control" placeholder="@Resources.Content.TimekeepingName VN">
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.TimekeepingName EN</label>
+                            <input type="text" id="TimeKeeperNameEN" name="TimeKeeperNameEN" value="@Html.DisplayFor(model => model.TimeKeeperNameEN)" class="form-control" placeholder="@Resources.Content.TimekeepingName EN">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Location</label>
+                            <input type="text" id="Location" name="Location" value="@Html.DisplayFor(model => model.Location)" class="form-control" placeholder="@Resources.Content.TimekeepingName EN">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.IPAddress</label>
+                            <input type="text" id="IPAddress" name="IPAddress" value="@Html.DisplayFor(model => model.IPAddress)" class="form-control" placeholder="@Resources.Content.TimekeepingName EN">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Brand</label>
+                            <input type="text" id="Brand" name="Brand" value="@Html.DisplayFor(model => model.Brand)" class="form-control" placeholder="@Resources.Content.TimekeepingName EN">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Model</label>
+                            <input type="text" id="Model" name="Model" value="@Html.DisplayFor(model => model.Model)" class="form-control" placeholder="@Resources.Content.TimekeepingName EN">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.DateBuy</label>
+                            <input type="text" id="DateBuy" name="DateBuy" value="@ViewBag.dateBuy" class="form-control" />
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.DateWarranty</label>
+                            <input type="text" id="DateWarranty" name="DateWarranty" value="@ViewBag.dateWarranty" class="form-control" />
+                        </div>
+
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

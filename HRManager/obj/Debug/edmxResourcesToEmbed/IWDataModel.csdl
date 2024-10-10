@@ -1,0 +1,878 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IWVNModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="IWVNEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblCompany" EntityType="IWVNModel.tblCompany" />
+    <EntitySet Name="tblContract" EntityType="IWVNModel.tblContract" />
+    <EntitySet Name="tblDegree" EntityType="IWVNModel.tblDegree" />
+    <EntitySet Name="tblDepartment" EntityType="IWVNModel.tblDepartment" />
+    <EntitySet Name="tblDiscipline" EntityType="IWVNModel.tblDiscipline" />
+    <EntitySet Name="tblDisciplineType" EntityType="IWVNModel.tblDisciplineType" />
+    <EntitySet Name="tblEducation" EntityType="IWVNModel.tblEducation" />
+    <EntitySet Name="tblEmployeeCard" EntityType="IWVNModel.tblEmployeeCard" />
+    <EntitySet Name="tblForeignLanguage" EntityType="IWVNModel.tblForeignLanguage" />
+    <EntitySet Name="tblHistoryTimekeeping" EntityType="IWVNModel.tblHistoryTimekeeping" />
+    <EntitySet Name="tblHistoryWork" EntityType="IWVNModel.tblHistoryWork" />
+    <EntitySet Name="tblHoliday" EntityType="IWVNModel.tblHoliday" />
+    <EntitySet Name="tblMaritalStatus" EntityType="IWVNModel.tblMaritalStatus" />
+    <EntitySet Name="tblNation" EntityType="IWVNModel.tblNation" />
+    <EntitySet Name="tblNationality" EntityType="IWVNModel.tblNationality" />
+    <EntitySet Name="tblOvertime" EntityType="IWVNModel.tblOvertime" />
+    <EntitySet Name="tblPosition" EntityType="IWVNModel.tblPosition" />
+    <EntitySet Name="tblProvince" EntityType="IWVNModel.tblProvince" />
+    <EntitySet Name="tblRelationship" EntityType="IWVNModel.tblRelationship" />
+    <EntitySet Name="tblRelationshipType" EntityType="IWVNModel.tblRelationshipType" />
+    <EntitySet Name="tblReligion" EntityType="IWVNModel.tblReligion" />
+    <EntitySet Name="tblReward" EntityType="IWVNModel.tblReward" />
+    <EntitySet Name="tblRewardForm" EntityType="IWVNModel.tblRewardForm" />
+    <EntitySet Name="tblRole" EntityType="IWVNModel.tblRole" />
+    <EntitySet Name="tblRoleCategory" EntityType="IWVNModel.tblRoleCategory" />
+    <EntitySet Name="tblStatusWork" EntityType="IWVNModel.tblStatusWork" />
+    <EntitySet Name="tblSysAction" EntityType="IWVNModel.tblSysAction" />
+    <EntitySet Name="tblSysFunction" EntityType="IWVNModel.tblSysFunction" />
+    <EntitySet Name="tblSysLog" EntityType="IWVNModel.tblSysLog" />
+    <EntitySet Name="tblTimeKeeper" EntityType="IWVNModel.tblTimeKeeper" />
+    <EntitySet Name="tblTypeContract" EntityType="IWVNModel.tblTypeContract" />
+    <EntitySet Name="tblTypeEmployeeCard" EntityType="IWVNModel.tblTypeEmployeeCard" />
+    <EntitySet Name="tblTypeInputTimekeeping" EntityType="IWVNModel.tblTypeInputTimekeeping" />
+    <EntitySet Name="tblTypeLeave" EntityType="IWVNModel.tblTypeLeave" />
+    <EntitySet Name="tblTypeReward" EntityType="IWVNModel.tblTypeReward" />
+    <EntitySet Name="tblWorkingShift" EntityType="IWVNModel.tblWorkingShift" />
+    <EntitySet Name="tblShiftArrange" EntityType="IWVNModel.tblShiftArrange" />
+    <EntitySet Name="tblAllowanceCategory" EntityType="IWVNModel.tblAllowanceCategory" />
+    <EntitySet Name="tblISalaryFormula" EntityType="IWVNModel.tblISalaryFormula" />
+    <EntitySet Name="tblLeave" EntityType="IWVNModel.tblLeave" />
+    <EntitySet Name="tblTimesheet" EntityType="IWVNModel.tblTimesheet" />
+    <EntitySet Name="tblAllowance" EntityType="IWVNModel.tblAllowance" />
+    <EntitySet Name="UserProfile" EntityType="IWVNModel.UserProfile" />
+    <EntitySet Name="tblEmployee" EntityType="IWVNModel.tblEmployee" />
+    <EntitySet Name="tblSalarySheet" EntityType="IWVNModel.tblSalarySheet" />
+    <EntitySet Name="tblAnnualLeave" EntityType="IWVNModel.tblAnnualLeave" />
+    <EntitySet Name="tblAnnualLeaveDetail" EntityType="IWVNModel.tblAnnualLeaveDetail" />
+    <EntitySet Name="tblSalarySheetAllowance" EntityType="IWVNModel.tblSalarySheetAllowance" />
+    <EntitySet Name="tblTimesheetDetail" EntityType="IWVNModel.tblTimesheetDetail" />
+    <EntitySet Name="tblSalarySheetDetail" EntityType="IWVNModel.tblSalarySheetDetail" />
+    <EntitySet Name="tblLeaveDetail" EntityType="IWVNModel.tblLeaveDetail" />
+  </EntityContainer>
+  <EntityType Name="tblCompany">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameCompanyVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameCompanyEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Tax" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Deputy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblContract">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="ContractCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeContractID" Type="Int32" />
+    <Property Name="DateSign" Type="DateTime" Precision="3" />
+    <Property Name="DateStart" Type="DateTime" Precision="3" />
+    <Property Name="DateEnd" Type="DateTime" Precision="3" />
+    <Property Name="Salary" Type="Int32" />
+    <Property Name="Allowance" Type="Int32" />
+    <Property Name="PayForms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PayDate" Type="Int32" />
+    <Property Name="WorkingTimeAM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkingTimePM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContractPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FileContract" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblDegree">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DegreeVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DegreeEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameDepartmentVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameDepartmentEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblDiscipline">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="EmployeeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateDiscipline" Type="DateTime" Precision="3" />
+    <Property Name="NoDiscipline" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeDiscipline" Type="Int32" />
+    <Property Name="Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FileDiscipline" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApproveBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApproveDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblDisciplineType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblEducation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="School" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DegreeID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Majors" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FromDate" Type="DateTime" Precision="0" />
+    <Property Name="ToDate" Type="DateTime" Precision="0" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblEmployeeCard">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="EmployeeCardID" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="TypeEmployeeCardID" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblForeignLanguage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ForeignLanguageVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ForeignLanguageEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblHistoryTimekeeping">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="TimeKeeperID" Type="Int32" />
+    <Property Name="TimekeepingDate" Type="DateTime" Precision="0" />
+    <Property Name="TimekeepingHour" Type="Time" Precision="7" />
+    <Property Name="TypeInputID" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblHistoryWork">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="Company" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PositionID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="JobID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FromDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ToDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblHoliday">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YearHoliday" Type="Int32" />
+    <Property Name="NameHolidayVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameHolidayEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fromDateHoliday" Type="DateTime" Precision="0" />
+    <Property Name="toDateHoliday" Type="DateTime" Precision="0" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblMaritalStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaritalStatusVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaritalStatusEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblNation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameNationVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameNationEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblNationality">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameNationalityVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameNationalityEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblOvertime">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="Reason" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DateOvertime" Type="DateTime" Precision="0" />
+    <Property Name="FromTime" Type="Time" Precision="7" />
+    <Property Name="ToTime" Type="Time" Precision="7" />
+    <Property Name="totalHours" Type="Double" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isApprove" Type="Boolean" />
+    <Property Name="UserApprove" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateApprove" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPosition">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PositionNameVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PositionNameEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblProvince">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="NameProvinceVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameProvinceEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblRelationship">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="Fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Relationship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblRelationshipType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationshipNameVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RelationshipNameEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblReligion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameReligionVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameReligionEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblReward">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="EmployeeCode" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="DateReward" Type="DateTime" Precision="3" />
+    <Property Name="NoReward" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeReward" Type="Int32" />
+    <Property Name="Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RewardForm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Money" Type="Int32" />
+    <Property Name="FileReward" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApproveBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApproveDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblRewardForm">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RewardFormVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RewardFormEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="CategoryRole" Type="Int32" />
+    <Property Name="RoleView" Type="Boolean" />
+    <Property Name="RoleUpdate" Type="Boolean" />
+    <Property Name="RoleDelete" Type="Boolean" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdate" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblRoleCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryNameVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryNameEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblStatusWork">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusWorkVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StatusWorkEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSysAction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActiveLog" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSysFunction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FunctionLog" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSysLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateLog" Type="DateTime" Precision="3" />
+    <Property Name="FunctionLog" Type="Int32" />
+    <Property Name="ActionLog" Type="Int32" />
+    <Property Name="ObjectLog" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblTimeKeeper">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimeKeeperNameVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeKeeperNameEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateBuy" Type="DateTime" Precision="0" />
+    <Property Name="DateWarranty" Type="DateTime" Precision="0" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblTypeContract">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameContractVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameContractEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QtyMonth" Type="Int32" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblTypeEmployeeCard">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeCardVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeCardEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblTypeInputTimekeeping">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeInputTimeKeepingVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeInputTimeKeepingEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblTypeLeave">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeLeaveVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeLeaveEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblTypeReward">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblWorkingShift">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkingShiftVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkingShiftEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fromTimeAM" Type="Time" Precision="7" />
+    <Property Name="toTimeAM" Type="Time" Precision="7" />
+    <Property Name="fromTimePM" Type="Time" Precision="7" />
+    <Property Name="toTimePM" Type="Time" Precision="7" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblShiftArrange">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="WorkingShiftID" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="fromDate" Type="DateTime" Precision="0" />
+    <Property Name="toDate" Type="DateTime" Precision="0" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblAllowanceCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllowanceNameVN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AllowanceNameEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Money" Type="Double" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblISalaryFormula">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BHYT" Type="Double" />
+    <Property Name="BHTN" Type="Double" />
+    <Property Name="BHXH" Type="Double" />
+    <Property Name="BHXHMax" Type="Double" />
+    <Property Name="UnionDues" Type="Double" />
+    <Property Name="UnionDuesMax" Type="Double" />
+    <Property Name="Overtime" Type="Double" />
+    <Property Name="OvertimeSunday" Type="Double" />
+    <Property Name="OvertimeHoliday" Type="Double" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblLeave">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="TypeLeaveID" Type="Int32" />
+    <Property Name="Reason" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="fromDate" Type="DateTime" Precision="3" />
+    <Property Name="toDate" Type="DateTime" Precision="3" />
+    <Property Name="totalHours" Type="Double" />
+    <Property Name="totalDay" Type="Double" />
+    <Property Name="ApproveByLeader" Type="Boolean" />
+    <Property Name="DateApproveByLeader" Type="DateTime" Precision="3" />
+    <Property Name="ApproveByManager" Type="Boolean" />
+    <Property Name="DateApproveByManager" Type="DateTime" Precision="3" />
+    <Property Name="ApproveByHR" Type="Boolean" />
+    <Property Name="DateApproveByHR" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblTimesheet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimesheetYear" Type="Int32" />
+    <Property Name="TimesheetMonth" Type="Int32" />
+    <Property Name="fromDate" Type="DateTime" Precision="0" />
+    <Property Name="toDate" Type="DateTime" Precision="0" />
+    <Property Name="DateCreate" Type="DateTime" Precision="0" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="0" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblAllowance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllowanceCategoryID" Type="Int32" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="DateCreate" Type="DateTime" Precision="3" />
+    <Property Name="DateUpdate" Type="DateTime" Precision="3" />
+    <Property Name="UserCreate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserUpdate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoleList" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isManagement" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CommonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="Boolean" Nullable="false" />
+    <Property Name="Images" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="PlaceOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Married" Type="Boolean" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressTmp" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CCCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateCCCD" Type="DateTime" Precision="3" />
+    <Property Name="IssuedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateStartWord" Type="DateTime" Precision="3" />
+    <Property Name="Health" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="Weight" Type="Int32" />
+    <Property Name="StatusWork" Type="Int32" />
+    <Property Name="NationalityID" Type="Int32" />
+    <Property Name="NationID" Type="Int32" />
+    <Property Name="ReligionID" Type="Int32" />
+    <Property Name="DegreeID" Type="Int32" />
+    <Property Name="ForeignID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BHXH" Type="Boolean" />
+    <Property Name="BHYT" Type="Boolean" />
+    <Property Name="BHTN" Type="Boolean" />
+    <Property Name="UnionDues" Type="Boolean" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedByUser" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedByDate" Type="DateTime" Precision="3" />
+    <Property Name="MaritalID" Type="Int32" />
+    <Property Name="Authority" Type="Boolean" />
+    <Property Name="Comment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserLastUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PositionID" Type="Int32" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="NoBHXH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateBHXH" Type="DateTime" Precision="3" />
+    <Property Name="IssueByBHXH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NoBHYT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fromDateBHYT" Type="DateTime" Precision="3" />
+    <Property Name="toDateBHYT" Type="DateTime" Precision="3" />
+    <Property Name="ProvinceBHYT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HopitalBHYT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="LeaderID" Type="Int32" />
+    <Property Name="ManagerID" Type="Int32" />
+    <Property Name="Salary" Type="Double" />
+  </EntityType>
+  <EntityType Name="tblSalarySheet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalarySheetYear" Type="Int32" />
+    <Property Name="SalarySheetMonth" Type="Int32" />
+    <Property Name="DateCreate" Type="DateTime" Precision="0" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="0" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblAnnualLeave">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="AnnualLeave" Type="Double" />
+    <Property Name="DateLastUpdate" Type="DateTime" Precision="0" />
+    <Property Name="ReasonUpdate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblAnnualLeaveDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="LeaveID" Type="Int32" />
+    <Property Name="TypeAction" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QtyAnnualLeave" Type="Double" />
+    <Property Name="QtyAnnualLeaveFinal" Type="Double" />
+    <Property Name="Detail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSalarySheetAllowance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalarySheetID" Type="Int32" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="AllowanceID" Type="Int32" />
+    <Property Name="AllowanceMoney" Type="Double" />
+    <Property Name="DateCreate" Type="DateTime" Precision="3" />
+    <Property Name="UserCreate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdate" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblTimesheetDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimesheetCode" Type="Int32" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="totalDayWork" Type="Double" />
+    <Property Name="totalHourWork" Type="Double" />
+    <Property Name="totalHourOvertime" Type="Double" />
+    <Property Name="totalHourOvertimeSunday" Type="Double" />
+    <Property Name="totalHourOvertimeHoliday" Type="Double" />
+    <Property Name="totalDayLeave" Type="Double" />
+    <Property Name="totalHourLeave" Type="Double" />
+    <Property Name="totalDayAbsent" Type="Double" />
+    <Property Name="totalHourAbsent" Type="Double" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSalarySheetDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="SalarySheetID" Type="Int32" />
+    <Property Name="BasicSalary" Type="Double" />
+    <Property Name="TimesheetDetailID" Type="Int32" />
+    <Property Name="MoneyWork" Type="Double" />
+    <Property Name="MoneyOvertime" Type="Double" />
+    <Property Name="MoneySunday" Type="Double" />
+    <Property Name="MoneyHoliday" Type="Double" />
+    <Property Name="MoneyUnpaidLeave" Type="Double" />
+    <Property Name="MoneyPadLeave" Type="Double" />
+    <Property Name="BHXH" Type="Double" />
+    <Property Name="BHYT" Type="Double" />
+    <Property Name="BHTN" Type="Double" />
+    <Property Name="UnionDues" Type="Double" />
+    <Property Name="TotalAllowance" Type="Double" />
+    <Property Name="TotalSalary" Type="Double" />
+    <Property Name="DateCreate" Type="DateTime" Precision="3" />
+    <Property Name="UserCreate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdate" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblLeaveDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LeaveID" Type="Int32" />
+    <Property Name="LeaveDate" Type="DateTime" Precision="0" />
+    <Property Name="LeaveQtyHours" Type="Double" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,80 @@
+﻿@model HRManager.tblLeave
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Details", "Leave", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.OnLeave</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.EmployeeCode</label>
+                            @Html.DropDownListFor(model => model.EmployeeID, ViewBag.EmployeeList as SelectList, @Resources.Content.EmployeeCode, new { @class = "form-control search-select", id = "EmployeeID", required = "required" })
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.FirstName <span class="required">*</span></label>
+                            <input type="text" readonly id="Fullname" name="Fullname" value="@ViewBag.Fullname" class="form-control" placeholder="@Resources.Content.FullName">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Department<span class="required">*</span></label>
+                            <input type="text" id="DepartmentID" readonly value="@ViewBag.DepartmentName" name="DepartmentID" class="form-control" placeholder="@Resources.Content.Department">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.Position<span class="required">*</span></label>
+                            <input type="text" id="PositionID" readonly name="PositionID" value="@ViewBag.PositionName" class="form-control" placeholder="@Resources.Content.Position">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.AnnualLeave </label>
+                            <input type="text" id="AnnualLeave" readonly name="AnnualLeave" value="@ViewBag.annualleave" class="form-control" placeholder="@Resources.Content.AnnualLeave">
+                        </div>
+
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.TypeLeave </label>
+                            @Html.DropDownListFor(model => model.TypeLeaveID, ViewBag.TypeLeave as SelectList, @Resources.Content.TypeLeave, new { @class = "form-control search-select", id = "TypeLeaveID", required = "required" })
+                        </div>
+
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <label>@Resources.Content.Reason </label>
+                            <input type="text" id="Reason" required value="@Html.DisplayFor(model => model.Reason)" class="form-control" placeholder="@Resources.Content.Reason" name="Reason">
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.FromDate </label>
+                            <input type="text" id="fromDate" required name="fromDate" value="@ViewBag.fromDate" class="form-control" />
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.ToDate </label>
+                            <input type="text" id="toDate" name="toDate" value="@ViewBag.toDate" class="form-control" onchange="validateDates()" />
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.TotalDays </label>
+                            <input type="text" id="totalDay" required value="@Html.DisplayFor(model => model.totalDay)" class="form-control" placeholder="@Resources.Content.TotalDays" name="totalDay">
+                        </div>
+                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                            <label>@Resources.Content.TotalHours </label>
+                            <input type="number" required id="totalHours" onchange="calculateTotal()" value="@Html.DisplayFor(model => model.totalHours)" class="form-control" placeholder="@Resources.Content.TotalHours" name="totalHours">
+                        </div>
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

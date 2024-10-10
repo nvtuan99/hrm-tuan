@@ -1,0 +1,147 @@
+﻿@model IEnumerable<HRManager.Models.ViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>@Resources.Content.UserAccount</h3>
+        </div>
+
+        <div class="title_right">
+            <a href="@Url.Action("Create","User")" class="btn btn-info btn-xs" style="float:right"><i class="fa fa-plus"></i></a>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-box table-responsive">
+                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>@Resources.Content.UserName</th>
+                                            <th>@Resources.Content.Employee</th>
+                                            <th>@Resources.Content.PositionWork</th>
+                                            <th>@Resources.Content.Role</th>
+                                            <th>@Resources.Content.Status</th>
+                                            <th>#</th>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@Html.DisplayFor(modelItem => item.userProfile.UserName)</td>
+                                                <td>
+                                                    <div>
+                                                        <i class="fa fa-user" style="color:darkgray"></i>
+                                                        @Html.DisplayFor(modelItem => item.employee.FirstName) @Html.DisplayFor(modelItem => item.employee.FullName)
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa fa-info-circle" style="color:darkgray"></i>
+                                                        @Html.DisplayFor(modelItem => item.employee.EmployeeCode)
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div>
+                                                        <i class="fa fa-sitemap" style="color:darkgray"></i>
+                                                        @Html.DisplayFor(modelItem => item.department.NameDepartmentVN, new { @Value = ViewBag.Department })
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa fa-newspaper-o" style="color:darkgray"></i>
+                                                        @Html.DisplayFor(modelItem => item.position.PositionNameVN, new { @Value = ViewBag.Department })
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    @if (item.userProfile.isManagement == true)
+                                                    {
+                                                        <i class="fa fa-users" style="color:red"></i>
+                                                        <span>
+                                                            Quản trị
+                                                        </span>
+                                                    }
+                                                    else 
+                                                    {
+                                                        <i class="fa fa-user" style="color:blue"></i>
+                                                        <span>
+                                                            Nhân viên
+                                                        </span>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @if (item.userProfile.AccountStatus == 1)
+                                                    {
+                                                        <span class="btn-danger" style="padding:10px;margin-top:10px">@Resources.Content.Lock</span>
+                                                    }
+                                                    else if (item.userProfile.IsActive == true)
+                                                    {
+                                                        <span class="btn-info" style="padding:10px;margin-top:10px">@Resources.Content.Work</span>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("Details", "User", new { id = @item.userProfile.UserId })" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i>  </a>
+                                                    <a href="#" class="btn btn-info btn-xs open-AddBookDialog" data-toggle="modal" data-target="#modalResetPassword" data-userid="@item.userProfile.UserId">
+                                                        <i class="fa fa-key"></i>
+                                                    </a>
+                                                    @if (item.userProfile.AccountStatus == 1)
+                                                    {
+                                                        <a href="" class="btn btn-danger" onclick="return confirmUnlockUser(@item.userProfile.UserId);"><i class="fa fa-unlock"></i>  </a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="" class="btn btn-danger" onclick="return confirmLockUser(@item.userProfile.UserId);"><i class="fa fa-lock"></i>  </a>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="modalResetPassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">@Resources.Content.PasswordReset</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="newPassword">@Resources.Content.PasswordNew</label>
+                        <input type="password" class="form-control" id="resetPassword" placeholder="@Resources.Content.PasswordNew">
+                        <span toggle="#password-field" id="reset-password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                    </div>
+                    <div id="resultMessage" class="alert" role="alert" style="display: none;"></div>
+                    <input type="hidden" id="userIdInput" name="userId" value="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" id="btnResetPass">@Resources.Content.Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+

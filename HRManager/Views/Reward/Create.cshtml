@@ -1,0 +1,95 @@
+﻿@model HRManager.tblReward
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Create", "Reward", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.Reward</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                        <div class="col-md-6 col-sm-6">
+                            <label>@Resources.Content.RewardNo<span class="required">*</span></label>
+                            <input type="text" id="NoReward" name="NoReward" required class="form-control" placeholder="@Resources.Content.RewardNo">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label>@Resources.Content.TypeReward </label>
+                            @Html.DropDownListFor(model => model.TypeReward, ViewBag.TypeReward as SelectList, "Loại khen thưởng", new { @class = "form-control search-select", id = "TypeReward", required = "required" })
+                        </div>
+
+                        <div class="col-md-12 col-sm-12" style="margin-top:15px;">
+                            <label>@Resources.Content.RewardReason <span class="required">*</span></label>
+                            <input type="text" id="Reason" name="Reason" required class="form-control" placeholder="@Resources.Content.RewardReason">
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.EmployeeCode <span class="required">*</span></label>
+                            @Html.DropDownListFor(model => model.EmployeeCode, ViewBag.EmployeeList as SelectList, @Resources.Content.EmployeeCode, new { @class = "form-control search-select", id = "EmployeeID", required = "required" })
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.FirstName <span class="required">*</span></label>
+                            <input type="text" readonly id="Fullname" name="Fullname" class="form-control" placeholder="@Resources.Content.FullName">
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.Department<span class="required">*</span></label>
+                            <input type="text" id="DepartmentID" readonly name="DepartmentID" class="form-control" placeholder="@Resources.Content.Department">
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.DateReward <span class="required">*</span></label>
+                            <input type="text" id="DateReward" name="DateReward" required class="form-control" placeholder="@Resources.Content.DateReward">
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.RewardForm<span class="required">*</span></label>
+                            @Html.DropDownListFor(model => model.RewardForm, ViewBag.RewardForm as SelectList, "Hình thức", new { @class = "form-control search-select", id = "RewardForm", required = "required" })
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.Money <span class="required">*</span></label>
+                            <input type="number" id="Money" name="Money" required class="form-control" placeholder="@Resources.Content.Money" value="0">
+                        </div>
+
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.File </label>
+                            
+                            <input type="file" style="margin-top:15px" id="FileReward" name="FileReward" class="form-control-file">
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.ApproveBy <span class="required">*</span></label>
+                            @Html.DropDownListFor(model => model.ApproveBy, ViewBag.ApproveBy as SelectList, "Người duyệt", new { @class = "form-control search-select", id = "ApproveBy", required = "required" })
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" style="margin-top:15px;">
+                            <label>@Resources.Content.ApproveDate <span class="required">*</span></label>
+                            <input type="text" id="ApproveDate" name="ApproveDate" required class="form-control" placeholder="@Resources.Content.ApproveDate" >
+                        </div>
+                        <div class="col-md-12 col-sm-12  form-group has-feedback" style="margin-top:15px;">
+                            <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IWVNModelStoreContainer" CdmEntityContainer="IWVNEntities">
+    <EntitySetMapping Name="tblAllowance">
+      <EntityTypeMapping TypeName="IWVNModel.tblAllowance">
+        <MappingFragment StoreEntitySet="tblAllowance">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AllowanceCategoryID" ColumnName="AllowanceCategoryID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAllowanceCategory">
+      <EntityTypeMapping TypeName="IWVNModel.tblAllowanceCategory">
+        <MappingFragment StoreEntitySet="tblAllowanceCategory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AllowanceNameVN" ColumnName="AllowanceNameVN" />
+          <ScalarProperty Name="AllowanceNameEN" ColumnName="AllowanceNameEN" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAnnualLeave">
+      <EntityTypeMapping TypeName="IWVNModel.tblAnnualLeave">
+        <MappingFragment StoreEntitySet="tblAnnualLeave">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="AnnualLeave" ColumnName="AnnualLeave" />
+          <ScalarProperty Name="DateLastUpdate" ColumnName="DateLastUpdate" />
+          <ScalarProperty Name="ReasonUpdate" ColumnName="ReasonUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAnnualLeaveDetail">
+      <EntityTypeMapping TypeName="IWVNModel.tblAnnualLeaveDetail">
+        <MappingFragment StoreEntitySet="tblAnnualLeaveDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="LeaveID" ColumnName="LeaveID" />
+          <ScalarProperty Name="TypeAction" ColumnName="TypeAction" />
+          <ScalarProperty Name="QtyAnnualLeave" ColumnName="QtyAnnualLeave" />
+          <ScalarProperty Name="QtyAnnualLeaveFinal" ColumnName="QtyAnnualLeaveFinal" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCompany">
+      <EntityTypeMapping TypeName="IWVNModel.tblCompany">
+        <MappingFragment StoreEntitySet="tblCompany">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameCompanyVN" ColumnName="NameCompanyVN" />
+          <ScalarProperty Name="NameCompanyEN" ColumnName="NameCompanyEN" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="Deputy" ColumnName="Deputy" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblContract">
+      <EntityTypeMapping TypeName="IWVNModel.tblContract">
+        <MappingFragment StoreEntitySet="tblContract">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="ContractCode" ColumnName="ContractCode" />
+          <ScalarProperty Name="TypeContractID" ColumnName="TypeContractID" />
+          <ScalarProperty Name="DateSign" ColumnName="DateSign" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Allowance" ColumnName="Allowance" />
+          <ScalarProperty Name="PayForms" ColumnName="PayForms" />
+          <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+          <ScalarProperty Name="WorkingTimeAM" ColumnName="WorkingTimeAM" />
+          <ScalarProperty Name="WorkingTimePM" ColumnName="WorkingTimePM" />
+          <ScalarProperty Name="ContractPlace" ColumnName="ContractPlace" />
+          <ScalarProperty Name="FileContract" ColumnName="FileContract" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDegree">
+      <EntityTypeMapping TypeName="IWVNModel.tblDegree">
+        <MappingFragment StoreEntitySet="tblDegree">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DegreeVN" ColumnName="DegreeVN" />
+          <ScalarProperty Name="DegreeEN" ColumnName="DegreeEN" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDepartment">
+      <EntityTypeMapping TypeName="IWVNModel.tblDepartment">
+        <MappingFragment StoreEntitySet="tblDepartment">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameDepartmentVN" ColumnName="NameDepartmentVN" />
+          <ScalarProperty Name="NameDepartmentEN" ColumnName="NameDepartmentEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDiscipline">
+      <EntityTypeMapping TypeName="IWVNModel.tblDiscipline">
+        <MappingFragment StoreEntitySet="tblDiscipline">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+          <ScalarProperty Name="DateDiscipline" ColumnName="DateDiscipline" />
+          <ScalarProperty Name="NoDiscipline" ColumnName="NoDiscipline" />
+          <ScalarProperty Name="TypeDiscipline" ColumnName="TypeDiscipline" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="FileDiscipline" ColumnName="FileDiscipline" />
+          <ScalarProperty Name="ApproveBy" ColumnName="ApproveBy" />
+          <ScalarProperty Name="ApproveDate" ColumnName="ApproveDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDisciplineType">
+      <EntityTypeMapping TypeName="IWVNModel.tblDisciplineType">
+        <MappingFragment StoreEntitySet="tblDisciplineType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameVN" ColumnName="NameVN" />
+          <ScalarProperty Name="NameEN" ColumnName="NameEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEducation">
+      <EntityTypeMapping TypeName="IWVNModel.tblEducation">
+        <MappingFragment StoreEntitySet="tblEducation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="School" ColumnName="School" />
+          <ScalarProperty Name="DegreeID" ColumnName="DegreeID" />
+          <ScalarProperty Name="Majors" ColumnName="Majors" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployee">
+      <EntityTypeMapping TypeName="IWVNModel.tblEmployee">
+        <MappingFragment StoreEntitySet="tblEmployee">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="CommonName" ColumnName="CommonName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+          <ScalarProperty Name="Married" ColumnName="Married" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="AddressTmp" ColumnName="AddressTmp" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CCCD" ColumnName="CCCD" />
+          <ScalarProperty Name="DateCCCD" ColumnName="DateCCCD" />
+          <ScalarProperty Name="IssuedBy" ColumnName="IssuedBy" />
+          <ScalarProperty Name="DateStartWord" ColumnName="DateStartWord" />
+          <ScalarProperty Name="Health" ColumnName="Health" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="StatusWork" ColumnName="StatusWork" />
+          <ScalarProperty Name="NationalityID" ColumnName="NationalityID" />
+          <ScalarProperty Name="NationID" ColumnName="NationID" />
+          <ScalarProperty Name="ReligionID" ColumnName="ReligionID" />
+          <ScalarProperty Name="DegreeID" ColumnName="DegreeID" />
+          <ScalarProperty Name="ForeignID" ColumnName="ForeignID" />
+          <ScalarProperty Name="BHXH" ColumnName="BHXH" />
+          <ScalarProperty Name="BHYT" ColumnName="BHYT" />
+          <ScalarProperty Name="BHTN" ColumnName="BHTN" />
+          <ScalarProperty Name="UnionDues" ColumnName="UnionDues" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="CreatedByUser" ColumnName="CreatedByUser" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="MaritalID" ColumnName="MaritalID" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserLastUpdated" ColumnName="UserLastUpdated" />
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="NoBHXH" ColumnName="NoBHXH" />
+          <ScalarProperty Name="DateBHXH" ColumnName="DateBHXH" />
+          <ScalarProperty Name="IssueByBHXH" ColumnName="IssueByBHXH" />
+          <ScalarProperty Name="NoBHYT" ColumnName="NoBHYT" />
+          <ScalarProperty Name="fromDateBHYT" ColumnName="fromDateBHYT" />
+          <ScalarProperty Name="toDateBHYT" ColumnName="toDateBHYT" />
+          <ScalarProperty Name="ProvinceBHYT" ColumnName="ProvinceBHYT" />
+          <ScalarProperty Name="HopitalBHYT" ColumnName="HopitalBHYT" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="LeaderID" ColumnName="LeaderID" />
+          <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployeeCard">
+      <EntityTypeMapping TypeName="IWVNModel.tblEmployeeCard">
+        <MappingFragment StoreEntitySet="tblEmployeeCard">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeCardID" ColumnName="EmployeeCardID" />
+          <ScalarProperty Name="TypeEmployeeCardID" ColumnName="TypeEmployeeCardID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblForeignLanguage">
+      <EntityTypeMapping TypeName="IWVNModel.tblForeignLanguage">
+        <MappingFragment StoreEntitySet="tblForeignLanguage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ForeignLanguageVN" ColumnName="ForeignLanguageVN" />
+          <ScalarProperty Name="ForeignLanguageEN" ColumnName="ForeignLanguageEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHistoryTimekeeping">
+      <EntityTypeMapping TypeName="IWVNModel.tblHistoryTimekeeping">
+        <MappingFragment StoreEntitySet="tblHistoryTimekeeping">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="TimeKeeperID" ColumnName="TimeKeeperID" />
+          <ScalarProperty Name="TimekeepingDate" ColumnName="TimekeepingDate" />
+          <ScalarProperty Name="TimekeepingHour" ColumnName="TimekeepingHour" />
+          <ScalarProperty Name="TypeInputID" ColumnName="TypeInputID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHistoryWork">
+      <EntityTypeMapping TypeName="IWVNModel.tblHistoryWork">
+        <MappingFragment StoreEntitySet="tblHistoryWork">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHoliday">
+      <EntityTypeMapping TypeName="IWVNModel.tblHoliday">
+        <MappingFragment StoreEntitySet="tblHoliday">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="YearHoliday" ColumnName="YearHoliday" />
+          <ScalarProperty Name="NameHolidayVN" ColumnName="NameHolidayVN" />
+          <ScalarProperty Name="NameHolidayEN" ColumnName="NameHolidayEN" />
+          <ScalarProperty Name="fromDateHoliday" ColumnName="fromDateHoliday" />
+          <ScalarProperty Name="toDateHoliday" ColumnName="toDateHoliday" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblISalaryFormula">
+      <EntityTypeMapping TypeName="IWVNModel.tblISalaryFormula">
+        <MappingFragment StoreEntitySet="tblISalaryFormula">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BHYT" ColumnName="BHYT" />
+          <ScalarProperty Name="BHTN" ColumnName="BHTN" />
+          <ScalarProperty Name="BHXH" ColumnName="BHXH" />
+          <ScalarProperty Name="BHXHMax" ColumnName="BHXHMax" />
+          <ScalarProperty Name="UnionDues" ColumnName="UnionDues" />
+          <ScalarProperty Name="UnionDuesMax" ColumnName="UnionDuesMax" />
+          <ScalarProperty Name="Overtime" ColumnName="Overtime" />
+          <ScalarProperty Name="OvertimeSunday" ColumnName="OvertimeSunday" />
+          <ScalarProperty Name="OvertimeHoliday" ColumnName="OvertimeHoliday" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLeave">
+      <EntityTypeMapping TypeName="IWVNModel.tblLeave">
+        <MappingFragment StoreEntitySet="tblLeave">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="TypeLeaveID" ColumnName="TypeLeaveID" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="fromDate" ColumnName="fromDate" />
+          <ScalarProperty Name="toDate" ColumnName="toDate" />
+          <ScalarProperty Name="totalHours" ColumnName="totalHours" />
+          <ScalarProperty Name="totalDay" ColumnName="totalDay" />
+          <ScalarProperty Name="ApproveByLeader" ColumnName="ApproveByLeader" />
+          <ScalarProperty Name="DateApproveByLeader" ColumnName="DateApproveByLeader" />
+          <ScalarProperty Name="ApproveByManager" ColumnName="ApproveByManager" />
+          <ScalarProperty Name="DateApproveByManager" ColumnName="DateApproveByManager" />
+          <ScalarProperty Name="ApproveByHR" ColumnName="ApproveByHR" />
+          <ScalarProperty Name="DateApproveByHR" ColumnName="DateApproveByHR" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLeaveDetail">
+      <EntityTypeMapping TypeName="IWVNModel.tblLeaveDetail">
+        <MappingFragment StoreEntitySet="tblLeaveDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LeaveID" ColumnName="LeaveID" />
+          <ScalarProperty Name="LeaveDate" ColumnName="LeaveDate" />
+          <ScalarProperty Name="LeaveQtyHours" ColumnName="LeaveQtyHours" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMaritalStatus">
+      <EntityTypeMapping TypeName="IWVNModel.tblMaritalStatus">
+        <MappingFragment StoreEntitySet="tblMaritalStatus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaritalStatusVN" ColumnName="MaritalStatusVN" />
+          <ScalarProperty Name="MaritalStatusEN" ColumnName="MaritalStatusEN" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblNation">
+      <EntityTypeMapping TypeName="IWVNModel.tblNation">
+        <MappingFragment StoreEntitySet="tblNation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameNationVN" ColumnName="NameNationVN" />
+          <ScalarProperty Name="NameNationEN" ColumnName="NameNationEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblNationality">
+      <EntityTypeMapping TypeName="IWVNModel.tblNationality">
+        <MappingFragment StoreEntitySet="tblNationality">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameNationalityVN" ColumnName="NameNationalityVN" />
+          <ScalarProperty Name="NameNationalityEN" ColumnName="NameNationalityEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOvertime">
+      <EntityTypeMapping TypeName="IWVNModel.tblOvertime">
+        <MappingFragment StoreEntitySet="tblOvertime">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="DateOvertime" ColumnName="DateOvertime" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="totalHours" ColumnName="totalHours" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+          <ScalarProperty Name="isApprove" ColumnName="isApprove" />
+          <ScalarProperty Name="UserApprove" ColumnName="UserApprove" />
+          <ScalarProperty Name="DateApprove" ColumnName="DateApprove" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPosition">
+      <EntityTypeMapping TypeName="IWVNModel.tblPosition">
+        <MappingFragment StoreEntitySet="tblPosition">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PositionNameVN" ColumnName="PositionNameVN" />
+          <ScalarProperty Name="PositionNameEN" ColumnName="PositionNameEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProvince">
+      <EntityTypeMapping TypeName="IWVNModel.tblProvince">
+        <MappingFragment StoreEntitySet="tblProvince">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameProvinceVN" ColumnName="NameProvinceVN" />
+          <ScalarProperty Name="NameProvinceEN" ColumnName="NameProvinceEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRelationship">
+      <EntityTypeMapping TypeName="IWVNModel.tblRelationship">
+        <MappingFragment StoreEntitySet="tblRelationship">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRelationshipType">
+      <EntityTypeMapping TypeName="IWVNModel.tblRelationshipType">
+        <MappingFragment StoreEntitySet="tblRelationshipType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RelationshipNameVN" ColumnName="RelationshipNameVN" />
+          <ScalarProperty Name="RelationshipNameEN" ColumnName="RelationshipNameEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblReligion">
+      <EntityTypeMapping TypeName="IWVNModel.tblReligion">
+        <MappingFragment StoreEntitySet="tblReligion">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameReligionVN" ColumnName="NameReligionVN" />
+          <ScalarProperty Name="NameReligionEN" ColumnName="NameReligionEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblReward">
+      <EntityTypeMapping TypeName="IWVNModel.tblReward">
+        <MappingFragment StoreEntitySet="tblReward">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+          <ScalarProperty Name="DateReward" ColumnName="DateReward" />
+          <ScalarProperty Name="NoReward" ColumnName="NoReward" />
+          <ScalarProperty Name="TypeReward" ColumnName="TypeReward" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="RewardForm" ColumnName="RewardForm" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="FileReward" ColumnName="FileReward" />
+          <ScalarProperty Name="ApproveBy" ColumnName="ApproveBy" />
+          <ScalarProperty Name="ApproveDate" ColumnName="ApproveDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRewardForm">
+      <EntityTypeMapping TypeName="IWVNModel.tblRewardForm">
+        <MappingFragment StoreEntitySet="tblRewardForm">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RewardFormVN" ColumnName="RewardFormVN" />
+          <ScalarProperty Name="RewardFormEN" ColumnName="RewardFormEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRole">
+      <EntityTypeMapping TypeName="IWVNModel.tblRole">
+        <MappingFragment StoreEntitySet="tblRole">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="CategoryRole" ColumnName="CategoryRole" />
+          <ScalarProperty Name="RoleView" ColumnName="RoleView" />
+          <ScalarProperty Name="RoleUpdate" ColumnName="RoleUpdate" />
+          <ScalarProperty Name="RoleDelete" ColumnName="RoleDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+          <ScalarProperty Name="UserUpdate" ColumnName="UserUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRoleCategory">
+      <EntityTypeMapping TypeName="IWVNModel.tblRoleCategory">
+        <MappingFragment StoreEntitySet="tblRoleCategory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CategoryNameVN" ColumnName="CategoryNameVN" />
+          <ScalarProperty Name="CategoryNameEN" ColumnName="CategoryNameEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSalarySheet">
+      <EntityTypeMapping TypeName="IWVNModel.tblSalarySheet">
+        <MappingFragment StoreEntitySet="tblSalarySheet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SalarySheetYear" ColumnName="SalarySheetYear" />
+          <ScalarProperty Name="SalarySheetMonth" ColumnName="SalarySheetMonth" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSalarySheetAllowance">
+      <EntityTypeMapping TypeName="IWVNModel.tblSalarySheetAllowance">
+        <MappingFragment StoreEntitySet="tblSalarySheetAllowance">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SalarySheetID" ColumnName="SalarySheetID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="AllowanceID" ColumnName="AllowanceID" />
+          <ScalarProperty Name="AllowanceMoney" ColumnName="AllowanceMoney" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+          <ScalarProperty Name="UserUpdate" ColumnName="UserUpdate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSalarySheetDetail">
+      <EntityTypeMapping TypeName="IWVNModel.tblSalarySheetDetail">
+        <MappingFragment StoreEntitySet="tblSalarySheetDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="SalarySheetID" ColumnName="SalarySheetID" />
+          <ScalarProperty Name="BasicSalary" ColumnName="BasicSalary" />
+          <ScalarProperty Name="TimesheetDetailID" ColumnName="TimesheetDetailID" />
+          <ScalarProperty Name="MoneyWork" ColumnName="MoneyWork" />
+          <ScalarProperty Name="MoneyOvertime" ColumnName="MoneyOvertime" />
+          <ScalarProperty Name="MoneySunday" ColumnName="MoneySunday" />
+          <ScalarProperty Name="MoneyHoliday" ColumnName="MoneyHoliday" />
+          <ScalarProperty Name="MoneyUnpaidLeave" ColumnName="MoneyUnpaidLeave" />
+          <ScalarProperty Name="MoneyPadLeave" ColumnName="MoneyPadLeave" />
+          <ScalarProperty Name="BHXH" ColumnName="BHXH" />
+          <ScalarProperty Name="BHYT" ColumnName="BHYT" />
+          <ScalarProperty Name="BHTN" ColumnName="BHTN" />
+          <ScalarProperty Name="UnionDues" ColumnName="UnionDues" />
+          <ScalarProperty Name="TotalAllowance" ColumnName="TotalAllowance" />
+          <ScalarProperty Name="TotalSalary" ColumnName="TotalSalary" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+          <ScalarProperty Name="UserUpdate" ColumnName="UserUpdate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblShiftArrange">
+      <EntityTypeMapping TypeName="IWVNModel.tblShiftArrange">
+        <MappingFragment StoreEntitySet="tblShiftArrange">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="WorkingShiftID" ColumnName="WorkingShiftID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="fromDate" ColumnName="fromDate" />
+          <ScalarProperty Name="toDate" ColumnName="toDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStatusWork">
+      <EntityTypeMapping TypeName="IWVNModel.tblStatusWork">
+        <MappingFragment StoreEntitySet="tblStatusWork">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StatusWorkVN" ColumnName="StatusWorkVN" />
+          <ScalarProperty Name="StatusWorkEN" ColumnName="StatusWorkEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysAction">
+      <EntityTypeMapping TypeName="IWVNModel.tblSysAction">
+        <MappingFragment StoreEntitySet="tblSysAction">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ActiveLog" ColumnName="ActiveLog" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysFunction">
+      <EntityTypeMapping TypeName="IWVNModel.tblSysFunction">
+        <MappingFragment StoreEntitySet="tblSysFunction">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FunctionLog" ColumnName="FunctionLog" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSysLog">
+      <EntityTypeMapping TypeName="IWVNModel.tblSysLog">
+        <MappingFragment StoreEntitySet="tblSysLog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccountLogin" ColumnName="AccountLogin" />
+          <ScalarProperty Name="DateLog" ColumnName="DateLog" />
+          <ScalarProperty Name="FunctionLog" ColumnName="FunctionLog" />
+          <ScalarProperty Name="ActionLog" ColumnName="ActionLog" />
+          <ScalarProperty Name="ObjectLog" ColumnName="ObjectLog" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTimeKeeper">
+      <EntityTypeMapping TypeName="IWVNModel.tblTimeKeeper">
+        <MappingFragment StoreEntitySet="tblTimeKeeper">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TimeKeeperNameVN" ColumnName="TimeKeeperNameVN" />
+          <ScalarProperty Name="TimeKeeperNameEN" ColumnName="TimeKeeperNameEN" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="DateBuy" ColumnName="DateBuy" />
+          <ScalarProperty Name="DateWarranty" ColumnName="DateWarranty" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTimesheet">
+      <EntityTypeMapping TypeName="IWVNModel.tblTimesheet">
+        <MappingFragment StoreEntitySet="tblTimesheet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TimesheetYear" ColumnName="TimesheetYear" />
+          <ScalarProperty Name="TimesheetMonth" ColumnName="TimesheetMonth" />
+          <ScalarProperty Name="fromDate" ColumnName="fromDate" />
+          <ScalarProperty Name="toDate" ColumnName="toDate" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTimesheetDetail">
+      <EntityTypeMapping TypeName="IWVNModel.tblTimesheetDetail">
+        <MappingFragment StoreEntitySet="tblTimesheetDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TimesheetCode" ColumnName="TimesheetCode" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="totalDayWork" ColumnName="totalDayWork" />
+          <ScalarProperty Name="totalHourWork" ColumnName="totalHourWork" />
+          <ScalarProperty Name="totalHourOvertime" ColumnName="totalHourOvertime" />
+          <ScalarProperty Name="totalHourOvertimeSunday" ColumnName="totalHourOvertimeSunday" />
+          <ScalarProperty Name="totalHourOvertimeHoliday" ColumnName="totalHourOvertimeHoliday" />
+          <ScalarProperty Name="totalDayLeave" ColumnName="totalDayLeave" />
+          <ScalarProperty Name="totalHourLeave" ColumnName="totalHourLeave" />
+          <ScalarProperty Name="totalDayAbsent" ColumnName="totalDayAbsent" />
+          <ScalarProperty Name="totalHourAbsent" ColumnName="totalHourAbsent" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeContract">
+      <EntityTypeMapping TypeName="IWVNModel.tblTypeContract">
+        <MappingFragment StoreEntitySet="tblTypeContract">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameContractVN" ColumnName="NameContractVN" />
+          <ScalarProperty Name="NameContractEN" ColumnName="NameContractEN" />
+          <ScalarProperty Name="QtyMonth" ColumnName="QtyMonth" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeEmployeeCard">
+      <EntityTypeMapping TypeName="IWVNModel.tblTypeEmployeeCard">
+        <MappingFragment StoreEntitySet="tblTypeEmployeeCard">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TypeCardVN" ColumnName="TypeCardVN" />
+          <ScalarProperty Name="TypeCardEN" ColumnName="TypeCardEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeInputTimekeeping">
+      <EntityTypeMapping TypeName="IWVNModel.tblTypeInputTimekeeping">
+        <MappingFragment StoreEntitySet="tblTypeInputTimekeeping">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TypeInputTimeKeepingVN" ColumnName="TypeInputTimeKeepingVN" />
+          <ScalarProperty Name="TypeInputTimeKeepingEN" ColumnName="TypeInputTimeKeepingEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeLeave">
+      <EntityTypeMapping TypeName="IWVNModel.tblTypeLeave">
+        <MappingFragment StoreEntitySet="tblTypeLeave">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TypeLeaveVN" ColumnName="TypeLeaveVN" />
+          <ScalarProperty Name="TypeLeaveEN" ColumnName="TypeLeaveEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypeReward">
+      <EntityTypeMapping TypeName="IWVNModel.tblTypeReward">
+        <MappingFragment StoreEntitySet="tblTypeReward">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameVN" ColumnName="NameVN" />
+          <ScalarProperty Name="NameEN" ColumnName="NameEN" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWorkingShift">
+      <EntityTypeMapping TypeName="IWVNModel.tblWorkingShift">
+        <MappingFragment StoreEntitySet="tblWorkingShift">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WorkingShiftVN" ColumnName="WorkingShiftVN" />
+          <ScalarProperty Name="WorkingShiftEN" ColumnName="WorkingShiftEN" />
+          <ScalarProperty Name="fromTimeAM" ColumnName="fromTimeAM" />
+          <ScalarProperty Name="toTimeAM" ColumnName="toTimeAM" />
+          <ScalarProperty Name="fromTimePM" ColumnName="fromTimePM" />
+          <ScalarProperty Name="toTimePM" ColumnName="toTimePM" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdated" ColumnName="UserUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfile">
+      <EntityTypeMapping TypeName="IWVNModel.UserProfile">
+        <MappingFragment StoreEntitySet="UserProfile">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+          <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+          <ScalarProperty Name="UserUpdate" ColumnName="UserUpdate" />
+          <ScalarProperty Name="RoleList" ColumnName="RoleList" />
+          <ScalarProperty Name="isManagement" ColumnName="isManagement" />
+          <ScalarProperty Name="AccountStatus" ColumnName="AccountStatus" />
+          <ScalarProperty Name="IPLastLogin" ColumnName="IPLastLogin" />
+          <ScalarProperty Name="DateLastLogin" ColumnName="DateLastLogin" />
+          <ScalarProperty Name="TimeNextLogin" ColumnName="TimeNextLogin" />
+          <ScalarProperty Name="CountLoginFailed" ColumnName="CountLoginFailed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

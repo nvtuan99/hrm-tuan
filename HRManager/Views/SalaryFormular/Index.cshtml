@@ -1,0 +1,124 @@
+﻿@model HRManager.tblISalaryFormula
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Details", "SalaryFormular", FormMethod.Post))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.Update @Resources.Content.SalaryFormular</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.HealthInsurance (%)<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" name="BHYT" value="@Html.DisplayFor(model => model.BHYT)" required class="form-control" placeholder="@Resources.Content.HealthInsurance">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.UnemploymentInsurance (%)<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" name="BHTN" value="@Html.DisplayFor(model => model.BHTN)" required class="form-control" placeholder="@Resources.Content.UnemploymentInsurance">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.SocialInsurance (%)<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" name="BHXH" value="@Html.DisplayFor(model => model.BHXH)" required class="form-control" placeholder="@Resources.Content.SocialInsurance">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.UnionDues (%)<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" name="UnionDues" value="@Html.DisplayFor(model => model.UnionDues)" required class="form-control" placeholder="@Resources.Content.UnionDues">
+                            </div>
+                        </div>
+
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.UnionFeeMaximum ( VNĐ )<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" name="UnionDuesMax" value="@Html.DisplayFor(model => model.UnionDuesMax)" required class="form-control" placeholder="@Resources.Content.UnionFeeMaximum">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.Overtime<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" name="Overtime" value="@Html.DisplayFor(model => model.Overtime)" required class="form-control" placeholder="@Resources.Content.Overtime">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.OvertimeSunday<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" name="OvertimeSunday" value="@Html.DisplayFor(model => model.OvertimeSunday)" required class="form-control" placeholder="@Resources.Content.OvertimeSunday">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.OvertimeHoliday<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" name="OvertimeHoliday" value="@Html.DisplayFor(model => model.OvertimeHoliday)" required class="form-control" placeholder="@Resources.Content.OvertimeHoliday">
+                            </div>
+                        </div>
+
+                        <div class="ln_solid"></div>
+                        <div class="item form-group">
+                            <div class="col-md-6 col-sm-6 offset-md-3">
+                                <button type="submit" class="btn btn-success">@Resources.Content.Save</button>
+                                <button class="btn btn-primary" type="button">@Resources.Content.Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+@if (TempData["insert"] != null)
+{
+    <script>
+        alert("Thêm mới thành công");
+    </script>
+}
+else
+{
+    if (TempData["update"] != null)
+    {
+        <script>
+            alert("Cập nhật thành công");
+        </script>
+    }
+}

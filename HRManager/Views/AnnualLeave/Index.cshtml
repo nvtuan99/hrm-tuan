@@ -1,0 +1,68 @@
+﻿@model IEnumerable<HRManager.Models.ViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="overflow-x-scroll">
+    <div class="row">
+        <div class="columnEmployeeAnnualLeave">
+            <table id="dtAnnualLeave" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                    <tr>
+                        <th style="display:none">ID</th>
+                        <th>@Resources.Content.Employee</th>
+                        <th>@Resources.Content.PositionWork</th>
+                        <th>@Resources.Content.AnnualLeave</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="selectable-row">
+                            <td style="display: none">@Html.DisplayFor(modelItem => item.employee.ID)</td>
+                            <td>
+                                <div>
+                                    <i class="fa fa-user" style="color:darkgray"></i>
+                                    @Html.DisplayFor(modelItem => item.employee.FirstName) @Html.DisplayFor(modelItem => item.employee.FullName)
+                                </div>
+                                <div>
+                                    <i class="fa fa-info-circle" style="color:darkgray"></i>
+                                    @Html.DisplayFor(modelItem => item.employee.EmployeeCode)
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <i class="fa fa-sitemap" style="color:darkgray"></i>
+                                    @Html.DisplayFor(modelItem => item.department.NameDepartmentVN, new { @Value = ViewBag.Department })
+                                </div>
+                                <div>
+                                    <i class="fa fa-newspaper-o" style="color:darkgray"></i>
+                                    @Html.DisplayFor(modelItem => item.position.PositionNameVN, new { @Value = ViewBag.Department })
+                                </div>
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.annualLeave.AnnualLeave)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="columnAnnualLeaveDetail">
+            <table id="AnnualLeaveDetailTable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>@Resources.Content.Date</th>
+                        <th>@Resources.Content.Status</th>
+                        <th>@Resources.Content.Qty</th>
+                        <th>@Resources.Content.Detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dữ liệu chi tiết sẽ được thêm vào đây bằng JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

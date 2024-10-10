@@ -1,0 +1,66 @@
+﻿@model HRManager.tblPosition
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Create", "Position", FormMethod.Post))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.Add @Resources.Content.Position</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.PositionName VN <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" name="PositionNameVN" required class="form-control" placeholder="@Resources.Content.PositionName VN">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.PositionName EN <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" name="PositionNameEN" required class="form-control" placeholder="@Resources.Content.PositionName EN">
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                @Resources.Content.Status
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <select class="form-control" name="isActive">
+                                    <option selected value="1">@Resources.Content.Active</option>
+                                    <option value="0">@Resources.Content.InActive</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ln_solid"></div>
+                        <div class="item form-group">
+                            <div class="col-md-6 col-sm-6 offset-md-3">
+                                @if (HRManager.Common.setRole.Role_HRCategory_update)
+                                {
+                                    <button type="submit" class="btn btn-success">@Resources.Content.Save</button>
+                                }
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

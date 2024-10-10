@@ -1,0 +1,102 @@
+﻿@model IEnumerable<HRManager.Models.ViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>@Resources.Content.Discipline</h3>
+        </div>
+
+        <div class="title_right">
+            @if (HRManager.Common.setRole.Role_HR_update)
+            {
+                <a href="@Url.Action("Create","Discipline")" class="btn btn-info btn-xs" style="float:right"><i class="fa fa-plus"></i></a>
+            }
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-box table-responsive">
+                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>@Resources.Content.Employee</th>
+                                            <th>@Resources.Content.PositionWork</th>
+                                            <th>@Resources.Content.Date</th>
+                                            <th>@Resources.Content.DisciplineType</th>
+                                            <th>@Resources.Content.File</th>
+                                            <th>#</th>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        @if (Model != null)
+                                        {
+                                            foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <i class="fa fa-user" style="color:darkgray"></i>
+                                                            @Html.DisplayFor(modelItem => item.employee.FirstName) @Html.DisplayFor(modelItem => item.employee.FullName)
+                                                        </div>
+                                                        <div>
+                                                            <i class="fa fa-info-circle" style="color:darkgray"></i>
+                                                            @Html.DisplayFor(modelItem => item.employee.EmployeeCode)
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <i class="fa fa-sitemap" style="color:darkgray"></i>
+                                                            @Html.DisplayFor(modelItem => item.department.NameDepartmentVN, new { @Value = ViewBag.Department })
+                                                        </div>
+                                                        <div>
+                                                            <i class="fa fa-newspaper-o" style="color:darkgray"></i>
+                                                            @Html.DisplayFor(modelItem => item.position.PositionNameVN, new { @Value = ViewBag.Department })
+                                                        </div>
+                                                    </td>
+                                                    <td>@Html.DisplayFor(modelItem => item.discipline.DateDiscipline)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.disciplineType.NameVN)</td>
+                                                    <td>
+                                                        @if (!string.IsNullOrEmpty(@item.discipline.FileDiscipline))
+                                                        {
+                                                            <a href="@Url.Action("DownloadFile", "Reward", new { filename = @item.discipline.FileDiscipline })" class="btn btn-info btn-xs"><i class="fa fa-file"></i></a>
+                                                        }
+                                                    </td>
+                                                    <td>
+                                                        <a href="@Url.Action("Details", "Discipline", new { id = @item.discipline.ID })" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> </a>
+                                                        <a href="" class="btn btn-danger btn-xs" onclick="return confirmDeleteDiscipline(@item.discipline.ID);"><i class="fa fa-trash-o"></i>  </a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,155 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Card -->
+<div class="col-xxl-4 col-md-6">
+    <div class="card info-card sales-card">
+        <div class="filter">
+            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                    <h6>@Resources.Content.TotalEmployee</h6>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">@Resources.Content.TotalEmployee</h5>
+
+            <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bx bxs-user-detail"></i>
+                </div>
+                <div class="ps-3">
+                    <h6>@ViewBag.TotalEmployee</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End Card -->
+<!-- Card -->
+<div class="col-xxl-4 col-md-6">
+    <div class="card info-card sales-card">
+        <div class="filter">
+            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                    <h6>@Resources.Content.TotalBirthdayInMonth</h6>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">@Resources.Content.TotalBirthdayInMonth</h5>
+
+            <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bx bxs-calendar-event"></i>
+                </div>
+                <div class="ps-3">
+                    <h6>@ViewBag.BirthdayInMonth</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End Card -->
+<!-- Card -->
+<div class="col-xxl-4 col-md-6">
+    <div class="card info-card sales-card">
+        <div class="filter">
+            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                    <h6>@Resources.Content.ContractExpirationInMonth</h6>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">@Resources.Content.ContractExpirationInMonth</h5>
+
+            <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bx bxs-file-export"></i>
+                </div>
+                <div class="ps-3">
+                    <h6>@ViewBag.ContractExpire</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End Card -->
+<!-- Card -->
+<div class="col-xxl-4 col-md-6">
+    <div class="card info-card sales-card">
+        <div class="filter">
+            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                    <h6>@Resources.Content.ContractExpirationInNextMonth</h6>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">@Resources.Content.ContractExpirationInNextMonth</h5>
+
+            <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bx bxs-exit"></i>
+                </div>
+                <div class="ps-3">
+                    <h6>@ViewBag.ContractExpireNextMonth</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End Card -->
+<!-- Card -->
+<div class="col-xxl-4 col-md-6">
+    <div class="card info-card sales-card">
+        <div class="filter">
+            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                    <h6>@Resources.Content.QtyLeaveInDay</h6>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">@Resources.Content.QtyLeaveInDay</h5>
+
+            <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bx bxs-message-rounded-minus"></i>
+                </div>
+                <div class="ps-3">
+                    <h6>@ViewBag.TotalCountLeaveOnDay</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End Card -->
+<!-- Card -->
+<div class="col-xxl-4 col-md-6">
+    <div class="card info-card sales-card">
+        <div class="filter">
+            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                    <h6>@Resources.Content.StaffArrangedShiftsInMonth</h6>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">@Resources.Content.StaffArrangedShiftsInMonth</h5>
+
+            <div class="d-flex align-items-center">
+                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bx bxs-category"></i>
+                </div>
+                <div class="ps-3">
+                    <h6>@ViewBag.EmployeeShift</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End Card -->

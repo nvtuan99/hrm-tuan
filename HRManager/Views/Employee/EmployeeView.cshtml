@@ -1,0 +1,492 @@
+﻿@model HRManager.tblEmployee
+@{
+    ViewBag.Title = "EmployeeView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var contract = ViewBag.Contract as tblContract ?? new tblContract();
+    var contractOfficial = ViewBag.ContractOfficial as tblContract ?? new tblContract();
+}
+@using (Html.BeginForm("EmployeeView", "Employee", FormMethod.Post, new { onsubmit = "return validateForm()" }))
+{
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>@Resources.Content.EmployeeInformation</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">@Resources.Content.PersonalInformation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="work-tab" data-toggle="tab" href="#work" role="tab" aria-controls="work" aria-selected="false">@Resources.Content.JobInformaton</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="relationship-tab" data-toggle="tab" href="#relationship" role="tab" aria-controls="relationship" aria-selected="false">@Resources.Content.Relationship</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="false">@Resources.Content.EducationExperience</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="x_panel">
+                                <div class="x_content">
+                                    <br />
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <div class="col-md-2 col-sm-2  form-group has-feedback">
+                                            <img class="form-control" id="output" src="~/Uploads/Images/Employee/@Model.Images" style="width:120px;height:100px" onchange="" />
+                                            @*<input class="form-control" name="photo" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])" type="file" id="upload" style="margin-top: 20px; width: 90%; font-size: 8px; border: none;")">*@
+                                            <input class="form-control" name="photo" accept="image/*" type="file" id="upload" style="margin-top: 20px; width: 90%; font-size: 8px; border: none;">
+                                        </div>
+                                        <div class="col-md-10 col-sm-10  form-group has-feedback">
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.EmployeeCode</label>
+                                                <input type="text" id="EmployeeCode" value="@Html.DisplayFor(model => model.EmployeeCode)" class="form-control" placeholder="EmployeeCode" name="EmployeeCode">
+                                            </div>
+
+
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.FirstName</label>
+                                                <input type="text" value="@Html.DisplayFor(model => model.FirstName)" class="form-control" name="FirstName" placeholder="First Name">
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.LastName</label>
+                                                <input type="text" value="@Html.DisplayFor(model => model.FullName)" class="form-control" name="FullName" placeholder="Full Name">
+                                            </div>
+
+                                            <div class="col-md-12 col-sm-12"><br /> </div>
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.OtherName</label>
+                                                <input type="text" value="@Html.DisplayFor(model => model.CommonName)" class="form-control" name="CommonName" placeholder="Other Name">
+                                            </div>
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.Gender</label>
+                                                <select class="form-control" name="Gender">
+                                                    @if (Model.Gender == true)
+                                                    {
+                                                        <option selected value="1">@Resources.Content.Male</option>
+                                                        <option value="0">@Resources.Content.Female</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="1">@Resources.Content.Male</option>
+                                                        <option selected value="0">@Resources.Content.Female</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                            <div class="col-md-4 col-sm-3">
+                                                <label>@Resources.Content.MarialStatus</label>
+                                                @Html.DropDownListFor(m => m.MaritalID, ViewBag.MaritalStatus as SelectList, "Tình trạng hôn nhân", new { @class = "form-control search-select", id = "MaritalStatus", @name = "MaritalID" })
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                        <label>@Resources.Content.Birthday </label>
+
+                                        @*<input type="text" id="Birthday" name="Birthday" value="@ViewBag.BirthdayString" class="form-control" />*@
+                                        @Html.TextBoxFor(model => model.Birthday, "{0:yyyy/MM/dd}", new { @class = "form-control", type = "text", id = "Birthday" })
+                                    </div>
+
+                                    <div class="col-md-8 col-sm-8  form-group has-feedback">
+                                        <label>@Resources.Content.PlaceOfBirth</label>
+                                        <input type="text" value="@Html.DisplayFor(model => model.PlaceOfBirth)" class="form-control" placeholder="Nơi Sinh" name="PlaceOfBirth" id="PlaceOfBirth">
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <label>@Resources.Content.Address</label>
+                                        <input type="text" value="@Html.DisplayFor(model => model.Address)" class="form-control" placeholder="Địa chỉ" name="Address" id="Address">
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <label>@Resources.Content.AddressTmp</label>
+                                        <input type="text" value="@Html.DisplayFor(model => model.AddressTmp)" class="form-control" placeholder="Tạm trú" name="AddressTmp" id="AddressTmp">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Phone</label>
+                                        <input type="text" id="Phone" value="@Html.DisplayFor(model => model.Phone)" class="form-control" placeholder="Điện thoại" name="Phone">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>Email</label>
+                                        <input type="email" id="Email" value="@Html.DisplayFor(model => model.Email)" class="form-control" placeholder="Email" name="Email">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.DateStartWord</label>
+                                        @Html.TextBoxFor(model => model.DateStartWord, "{0:yyyy/MM/dd}", new { @id = "DateStartWord", @class = "form-control", type = "text" })
+                                    </div>
+
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Nationality</label>
+                                        @Html.DropDownListFor(m => m.NationalityID, ViewBag.Nationality as SelectList, "Quốc tịch", new { @class = "form-control search-select", id = "Nationality" })
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Nation</label>
+                                        @Html.DropDownListFor(m => m.NationID, ViewBag.Nation as SelectList, "Dân tộc", new { @class = "form-control search-select", id = "NationID" })
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Religion</label>
+                                        @Html.DropDownListFor(m => m.ReligionID, ViewBag.Religion as SelectList, "Tôn giáo", new { @class = "form-control search-select", id = "ReligionID" })
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Degree</label>
+                                        @Html.DropDownListFor(m => m.DegreeID, ViewBag.Degree as SelectList, "Học vấn", new { @class = "form-control search-select", id = "DegreeID" })
+                                    </div>
+
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.ForeignLanguage</label>
+                                        <div style="display: flex; flex-wrap: wrap;">
+                                            @foreach (var names in ViewBag.ForeignLanguage)
+                                            {
+                                                bool isChecked = false;
+                                                if (Model.ForeignID != null)
+                                                {
+                                                    isChecked = Model.ForeignID.Contains(names.Value);
+                                                }
+                                                <div class="checkbox flat" style="flex-basis: 20%; flex-shrink: 0;">
+                                                    <label>
+                                                        <input style="width:20px" type="checkbox" name="ForeignsID" class="form-control" value="@names.Value" @(isChecked ? "checked" : "") />
+                                                        <span>@names.Text</span>
+                                                    </label>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        @Html.CheckBoxFor(m => m.Authority, new { @checked = "checked", @id = "Authority", @name = "Authority" })
+                                        <span>@Resources.Content.PersonalAuthorization</span>
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.CCCD</label>
+                                        <input type="text" value="@Html.DisplayFor(model => model.CCCD)" class="form-control" placeholder="Số CCCD" name="CCCD" id="CCCD ">
+                                    </div>
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Date</label>
+                                        @Html.TextBoxFor(model => model.DateCCCD, "{0:yyyy/MM/dd}", new { @class = "form-control", type = "text", @id = "DateCCCD", @name = "DateCCCD" })
+                                    </div>
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.IssuedBy</label>
+                                        <input type="text" value="@Html.DisplayFor(model => model.IssuedBy)" class="form-control" placeholder="Nơi cấp" name="IssuedBy" id="IssuedBy">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback" style="visibility: hidden">
+                                        <label>ID</label>
+                                        <input type="text" name="IDEmp" id="IDEmp" value="@Html.DisplayFor(model => model.ID)" readonly="readonly" class="form-control" placeholder="Default Input">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Health</label>
+                                        <input type="text" value="@Html.DisplayFor(model => model.Health)" class="form-control" placeholder="Sức khỏe" name="Health" id="Health">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Height (cm)</label>
+                                        <input type="number" value="@Html.DisplayFor(model => model.Height)" class="form-control" placeholder="Chiều cao" name="Height" id="Height">
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                        <label>@Resources.Content.Weight (Kg)</label>
+                                        <input type="number" value="@Html.DisplayFor(model => model.Weight)" class="form-control" placeholder="Cân nặng" name="Weight" id="Weight">
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <label>@Resources.Content.Note</label>
+                                        <input type="text" name="Note" id="Note" value="@Html.DisplayFor(model => model.Note)" class="form-control" placeholder="Ghi chú">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                                        <label>@Resources.Content.WorkStatus</label>
+                                        @Html.DropDownListFor(m => m.StatusWork, ViewBag.WorkStatus as SelectList, "Trạng thái", new { @class = "form-control search-select", id = "ID" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="work" role="tabpanel" aria-labelledby="work-tab">
+                            <div class="x_panel">
+                                <div class="x_content">
+                                    <br />
+                                    <div style="margin-bottom:5px">@Resources.Content.Company</div>
+
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback border" style="padding:10px">
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Company</label>
+                                            @Html.DropDownListFor(m => m.CompanyID, ViewBag.CompanyInfor as SelectList, "Công ty", new { @class = "form-control search-select", id = "CompanyID", name = "CompanyID" })
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Department</label>
+                                            @Html.DropDownListFor(m => m.DepartmentID, ViewBag.Department as SelectList, "Phòng ban", new { @class = "form-control search-select", id = "DeparmentID", name = "DeparmentID" })
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Position</label>
+                                            @Html.DropDownListFor(m => m.PositionID, ViewBag.Position as SelectList, "Chức vụ", new { @class = "form-control search-select", id = "PositionID", name = "PositionID" })
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Leader</label>
+                                            @Html.DropDownListFor(m => m.LeaderID, ViewBag.LeaderPerson as SelectList, "Tổ trưởng", new { @class = "form-control search-select", id = "LeaderID", name = "LeaderID" })
+                                        </div>
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Manager</label>
+                                            @Html.DropDownListFor(m => m.ManagerID, ViewBag.ManagerPerson as SelectList, "Quản lý", new { @class = "form-control search-select", id = "ManagerID", name = "ManagerID" })
+                                        </div>
+                                    </div>
+
+
+                                    <div style="margin-bottom:5px">@Resources.Content.SocialInsurance</div>
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback border" style="padding:10px">
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.No</label>
+                                            <input type="text" value="@Html.DisplayFor(model => model.NoBHXH)" class="form-control" placeholder="Số sổ BHXH" name="NoBHXH" id="NoBHXH">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Date</label>
+                                            @Html.TextBoxFor(model => model.DateBHXH, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "text", @id = "DateBHXH", @name = "DateBHXH" })
+                                        </div>
+
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.IssuedBy</label>
+                                            <input type="text" value="@Html.DisplayFor(model => model.IssueByBHXH)" class="form-control" placeholder="Nơi cấp BHXH" name="IssueByBHXH" id="IssueByBHXH">
+                                        </div>
+                                    </div>
+
+
+
+                                    <div style="margin-bottom:5px">@Resources.Content.HealthInsurance</div>
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback border" style="padding:10px">
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.No</label>
+                                            <input type="text" value="@Html.DisplayFor(model => model.NoBHYT)" class="form-control" placeholder="Số sổ BHYT" name="NoBHYT" id="NoBHYT">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.FromDate</label>
+                                            @Html.TextBoxFor(model => model.fromDateBHYT, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "text", @id = "fromDateBHYT", @name = "fromDateBHYT" })
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.ToDate</label>
+                                            @Html.TextBoxFor(model => model.toDateBHYT, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "text", @id = "toDateBHYT", @name = "toDateBHYT" })
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Province</label>
+                                            <input type="text" value="@Html.DisplayFor(model => model.ProvinceBHYT)" class="form-control" placeholder="Tỉnh thành BHYT" name="ProvinceBHYT" id="ProvinceBHYT">
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                            <label>@Resources.Content.Hopital</label>
+                                            <input type="text" value="@Html.DisplayFor(model => model.HopitalBHYT)" class="form-control" placeholder="Bệnh viện" name="HopitalBHYT" id="HopitalBHYT">
+                                        </div>
+                                    </div>
+
+
+                                    <div style="margin-bottom:5px">@Resources.Content.MonthlyPayments</div>
+                                    <div class="col-md-12 col-sm-12  form-group has-feedback border" style="padding:10px">
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            @Html.CheckBoxFor(m => m.BHXH, new { @checked = "checked", @id = "BHXH", @name = "BHXH" })
+                                            <span>@Resources.Content.SocialInsurance</span>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            @Html.CheckBoxFor(m => m.BHYT, new { @checked = "checked", @id = "BHYT", @name = "BHYT" })
+                                            <span>@Resources.Content.HealthInsurance</span>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            @Html.CheckBoxFor(m => m.BHTN, new { @checked = "checked", @id = "BHTN", @name = "BHTN" })
+                                            <span>@Resources.Content.UnemploymentInsurance</span>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3  form-group has-feedback">
+                                            @Html.CheckBoxFor(m => m.UnionDues, new { @checked = "checked", @id = "UnionDues", @name = "UnionDues" })
+                                            <span>@Resources.Content.UnionDues</span>
+                                        </div>
+                                    </div>
+
+                                    @*<div style="margin-bottom:5px">Thử việc</div>
+                                        <div class="col-md-12 col-sm-12 form-group has-feedback border" style="padding:10px">
+                                            <div class="col-md-2 col-sm-2 form-group has-feedback">
+                                                <label>Số HĐ</label>
+                                                <input type="text" value="@contract.ContractNo" class="form-control" placeholder="Số HĐ" name="ContractNo" id="ContractNo">
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 form-group has-feedback">
+                                                <label>Mức lương</label>
+                                                <input type="text" value="@contract.Salary.GetValueOrDefault().ToString()" class="form-control" placeholder="Lương" name="Salary" id="Salary">
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 form-group has-feedback">
+                                                <label>Số tháng</label>
+                                                <input type="text" value="@contract.QtyMonth" class="form-control" placeholder="Thời gian" name="QtyMonth" id="QtyMonth">
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 form-group has-feedback">
+                                                <label>Từ ngày</label>
+                                                <input type="date" value="@((contract.FromDate ?? DateTime.Now).ToString("yyyy-MM-dd"))" class="form-control" id="FromDate" name="FromDate" />
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 form-group has-feedback">
+                                                <label>Đến ngày</label>
+                                                <input type="date" value="@((contract.ToDate ?? DateTime.Now).ToString("yyyy-MM-dd"))" class="form-control" id="ToDate" name="ToDate" />
+                                            </div>
+                                        </div>*@
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="relationship" role="tabpanel" aria-labelledby="relationship-tab">
+                            <div class="x_panel">
+                                <div class="x_content">
+                                    <br />
+                                    <table id="dtRelationship" class="table table-striped table-bordered" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>@Resources.Content.FullName</th>
+                                                <th>@Resources.Content.Relationship</th>
+                                                <th>@Resources.Content.Phone</th>
+                                                <th>@Resources.Content.Address</th>
+                                                <th>@Resources.Content.Birthday</th>
+                                                <th>#</th>
+                                            </tr>
+                                        </thead>
+                                        <thead>
+                                            <tr>
+                                                <td width="15%"><input type="text" id="RelFullname" class="form-control" /></td>
+                                                <td>
+                                                    @Html.DropDownList("RelationshipNameVN", (IEnumerable<SelectListItem>)ViewBag.RelationShipType, null, new { @class = "form-control", id = "Relationship" })
+                                                </td>
+                                                <td><input type="text" id="RelPhone" class="form-control" /></td>
+                                                <td width="20%"><input type="text" id="RelAddress" class="form-control" /></td>
+                                                <td>
+                                                    <input type="text" id="RelBirthday" class="form-control" placeholder="yyyy/mm/dd" value="" />
+                                                </td>
+                                                <td>
+                                                    @if (HRManager.Common.setRole.Role_HR_update)
+                                                    {
+                                                        <input type="button" id="btnAdd" value="@Resources.Content.Add" class="btn btn-primary" />
+                                                        <input type="button" id="btnUpdate" value="@Resources.Content.Update" class="btn btn-primary" style="display:none;" /> <!-- The Update button is initially hidden -->
+                                                    }
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        @*Trình độ học vấn*@
+                        <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab">
+                            <div class="x_panel">
+                                <div class="x_content">
+                                    <br />
+                                    <h2>@Resources.Content.Degree</h2>
+                                    <table id="dtEducation" class="table table-striped table-bordered" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>@Resources.Content.SchoolName</th>
+                                                <th width="10%">@Resources.Content.Degree</th>
+                                                <th>@Resources.Content.Major</th>
+                                                <th>@Resources.Content.FromDate</th>
+                                                <th>@Resources.Content.ToDate</th>
+                                                <th width="15%">#</th>
+                                            </tr>
+                                        </thead>
+                                        <thead>
+                                            <tr>
+                                                <td width="20%"><input type="text" id="EducationSchool" class="form-control" /></td>
+                                                <td width="20%">
+                                                    @Html.DropDownList("DegreeVN", (IEnumerable<SelectListItem>)ViewBag.DegreeAll, null, new { @class = "form-control", id = "EducationDegree" })
+                                                </td>
+                                                <td width="15%"><input type="text" id="EducationMajors" class="form-control" /></td>
+                                                <td>
+                                                    <input type="text" id="EducationFromDate" class="form-control" placeholder="yyyy/mm/dd" value="" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="EducationToDate" class="form-control" placeholder="yyyy/mm/dd" value="" />
+                                                </td>
+                                                <td width="15%">
+                                                    @if (HRManager.Common.setRole.Role_HR_update)
+                                                    {
+                                                        <input type="button" id="btnEducationAdd" value="@Resources.Content.Add" class="btn btn-primary" />
+                                                        <input type="button" id="btnUpdateEducation" value="@Resources.Content.Update" class="btn btn-primary" style="display:none;" /> <!-- The Update button is initially hidden -->
+                                                    }
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                                <div class="x_content">
+                                    <br />
+                                    <h2>@Resources.Content.WorkExperience</h2>
+                                    <table id="dtHistoryWork" class="table table-striped table-bordered" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>@Resources.Content.Company</th>
+                                                <th>@Resources.Content.Position</th>
+                                                <th>@Resources.Content.Department</th>
+                                                <th>@Resources.Content.FromDate</th>
+                                                <th>@Resources.Content.ToDate</th>
+                                                <th width="15%">#</th>
+                                            </tr>
+                                        </thead>
+                                        <thead>
+                                            <tr>
+                                                <td width="20%"><input type="text" id="HWCompany" class="form-control" /></td>
+                                                <td width="20%">
+                                                    @Html.DropDownList("PositionNameVN", (IEnumerable<SelectListItem>)ViewBag.PositionAll, null, new { @class = "form-control", id = "HWPosition" })
+                                                </td>
+                                                <td width="15%"><input type="text" id="HWJobID" class="form-control" /></td>
+                                                <td>
+                                                    <input type="text" id="HWFromDate" class="form-control" placeholder="yyyy/mm/dd" value="" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="HWToDate" class="form-control" placeholder="yyyy/mm/dd" value="" />
+                                                </td>
+                                                <td>
+                                                    @if (HRManager.Common.setRole.Role_HR_update)
+                                                    {
+                                                        <input type="button" id="btnHistoryWorkAdd" value="@Resources.Content.Add" class="btn btn-primary" />
+                                                        <input type="button" id="btnUpdateHistoryWork" value="@Resources.Content.Update" class="btn btn-primary" style="display:none;" /> <!-- The Update button is initially hidden -->
+                                                    }
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="col-md-12 col-sm-12  form-group has-feedback">
+                        @if (HRManager.Common.setRole.Role_HR_update)
+                        {
+                            <button type="submit" class="btn btn-success" style="float:right;padding-right:20px;padding-left:20px">@Resources.Content.Save</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
